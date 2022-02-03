@@ -15,7 +15,7 @@
 
 # Description
 
-inspired by [Tomáš Bouda](https://medium.com/@tomas.bouda) and his [100 days of algorithm]{https://medium.com/100-days-of-algorithms/100-days-of-algorithms-challenge-41996f7e1ec8} challenge, my attempt on it. Besides my work, my family and other activities this challenge will take me surely longer than 100 days and it can be more or less than 100 algorithms. So be kind.
+inspired by [Tomáš Bouda](https://medium.com/@tomas.bouda) and his [100 days of algorithm](https://medium.com/100-days-of-algorithms/100-days-of-algorithms-challenge-41996f7e1ec8) challenge, my attempt on it. Besides my work, my family and other activities this challenge will take me surely longer than 100 days and it can be more or less than 100 algorithms. So be kind.
 
 ## Why use Python
 
@@ -31,13 +31,13 @@ The individual challenges should take as less time as possible therefore a high 
 
 # Algorithms
 
-| Done | #Algo | Name                        | Link |
-| ---  | ----- | --------------------------- | ---- |
-| [x]  |   000 | Hanoi Tower                 | [](./src/000-hanoi-tower.ipynb) |
-| [ ]  |   001 | Matrix chain multiplication | [](./src/001-matrix-chain-multiplication.ipynb) |
-| [ ]  |   002 | Next permutation            | [](./src/002-permutation.ipynb) |
-| [ ]  |   003 | Counting 1-bits             | [](./src/003-counting-1bits.ipynb) |
-| [ ]  |   004 | Eratosthenes sieve          | [](./src/004-eratosthenes-sieve.ipynb) |
+| Done   | #Algo | Name                        | Link |
+| -----  | ----- | --------------------------- | ---- |
+| - [x]  |   000 | Hanoi Tower                 | [000-hanoi-tower.ipynb](./src/000-hanoi-tower.ipynb) |
+| - [ ]  |   001 | Matrix chain multiplication | [001-matrix-chain-multiplication.ipynb](./src/001-matrix-chain-multiplication.ipynb) |
+| - [ ]  |   002 | Next permutation            | [002-permutation.ipynb](./src/002-permutation.ipynb) |
+| - [ ]  |   003 | Counting 1-bits             | [003-counting-1bits.ipynb](./src/003-counting-1bits.ipynb) |
+| - [ ]  |   004 | Eratosthenes sieve          | [004-eratosthenes-sieve.ipynb](./src/004-eratosthenes-sieve.ipynb) |
 
 # Credits
 
