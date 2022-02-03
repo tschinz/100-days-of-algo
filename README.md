@@ -31,13 +31,13 @@ The individual challenges should take as less time as possible therefore a high 
 
 # Algorithms
 
-| Done   | #Algo | Name                        | Link |
-| -----  | ----- | --------------------------- | ---- |
-| - [x]  |   000 | Hanoi Tower                 | [000-hanoi-tower.ipynb](./src/000-hanoi-tower.ipynb) |
-| - [ ]  |   001 | Matrix chain multiplication | [001-matrix-chain-multiplication.ipynb](./src/001-matrix-chain-multiplication.ipynb) |
-| - [ ]  |   002 | Next permutation            | [002-permutation.ipynb](./src/002-permutation.ipynb) |
-| - [ ]  |   003 | Counting 1-bits             | [003-counting-1bits.ipynb](./src/003-counting-1bits.ipynb) |
-| - [ ]  |   004 | Eratosthenes sieve          | [004-eratosthenes-sieve.ipynb](./src/004-eratosthenes-sieve.ipynb) |
+| Done                    | #Algo | Name                        | Link |
+| ----------------------  | ----- | --------------------------- | ---- |
+| :ballot_box_with_check: |   000 | Hanoi Tower                 | [000-hanoi-tower.ipynb](./src/000-hanoi-tower.ipynb) |
+| :x:                     |   001 | Matrix chain multiplication | [001-matrix-chain-multiplication.ipynb](./src/001-matrix-chain-multiplication.ipynb) |
+| :x:                     |   002 | Next permutation            | [002-permutation.ipynb](./src/002-permutation.ipynb) |
+| :x:                     |   003 | Counting 1-bits             | [003-counting-1bits.ipynb](./src/003-counting-1bits.ipynb) |
+| :x:                     |   004 | Eratosthenes sieve          | [004-eratosthenes-sieve.ipynb](./src/004-eratosthenes-sieve.ipynb) |
 
 # Credits
 
