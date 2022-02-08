@@ -31,15 +31,16 @@ The individual challenges should take as less time as possible therefore a high 
 
 # Algorithms
 
-| Done                    | #Algo | Name                                                                       | Topic      | Algorithm Type       |
-| ----------------------  | ----- | -------------------------------------------------------------------------- | ---------- | -------------------- |
-| :ballot_box_with_check: |   000 | [Hanoi Tower](./src/000-hanoi-tower.ipynb)                                 | Game       | Recursive            |
-| :x:                     |   001 | [Matrix chain multiplication](./src/001-matrix-chain-multiplication.ipynb) | Math       |                      |
-| :ballot_box_with_check: |   002 | [Permutations](./src/002-permutations.ipynb)                               | Math       | Recursive            |
-| :ballot_box_with_check: |   003 | [Counting 1-bits](./src/003-counting-1bits.ipynb)                          | Digital    | Dynamic Programming  |
-| :ballot_box_with_check: |   004 | [Eratosthenes sieve Prime Numbers](./src/004-eratosthenes-sieve.ipynb)     | Math       | Brute Force          |
-| :ballot_box_with_check: |   005 | [Binary Addition FSM](./src/005-binary-addition-fsm.ipynb)                 | Digital    | Finite State Machine |
-| :x:                     |   006 | [Binary Search](./src/006-binary-search.ipynb)                             | Searching  | Divide and Conquer   |
+| Done                    | #Algo | Name                                                                       | Topic      | Algorithm Type                |
+| ----------------------  | ----- | -------------------------------------------------------------------------- | ---------- | ----------------------------- |
+| :ballot_box_with_check: |   000 | [Hanoi Tower](./src/000-hanoi-tower.ipynb)                                 | Game       | Recursive                     |
+| :x:                     |   001 | [Matrix Chain Multiplication](./src/001-matrix-chain-multiplication.ipynb) | Math       |                               |
+| :ballot_box_with_check: |   002 | [Permutations](./src/002-permutations.ipynb)                               | Math       | Recursive                     |
+| :ballot_box_with_check: |   003 | [Counting 1-Bits](./src/003-counting-1bits.ipynb)                          | Digital    | Dynamic Programming           |
+| :ballot_box_with_check: |   004 | [Eratosthenes Sieve Prime Numbers](./src/004-eratosthenes-sieve.ipynb)     | Math       | Brute Force                   |
+| :ballot_box_with_check: |   005 | [Binary Addition FSM](./src/005-binary-addition-fsm.ipynb)                 | Digital    | Finite State Machine          |
+| :ballot_box_with_check: |   006 | [Binary Search](./src/006-binary-search.ipynb)                             | Searching  | Divide and Conquer, Recursive |
+| :x:                     |   007 | [Maze Generation](./src/007-maze-generation-kruskal.ipynb)                 | Searching  | Greedy                        |
 
 # Types of Algorithm
 
