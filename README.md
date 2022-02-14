@@ -40,7 +40,11 @@ The individual challenges should take as less time as possible therefore a high 
 | :ballot_box_with_check: |   004 | [Eratosthenes Sieve Prime Numbers](./src/004-eratosthenes-sieve.ipynb)     | Math       | Brute Force                   |
 | :ballot_box_with_check: |   005 | [Binary Addition FSM](./src/005-binary-addition-fsm.ipynb)                 | Digital    | Finite State Machine          |
 | :ballot_box_with_check: |   006 | [Binary Search](./src/006-binary-search.ipynb)                             | Searching  | Divide and Conquer, Recursive |
-| :x:                     |   007 | [Maze Generation](./src/007-maze-generation-kruskal.ipynb)                 | Searching  | Greedy                        |
+| :ballot_box_with_check: |   007 | [Union Find](./src/007-union-find.ipynb)                                   | Graph      | Iterative                     |
+| :ballot_box_with_check: |   008 | [Kruskal's Maze Generation](./src/008-maze-generation-kruskal.ipynb)       | Graph      | Greedy                        |
+| :ballot_box_with_check: |   009 | [Lee's Maze Solver](./src/009-maze-solver-lee.ipynb)                       | Graph      | Backtracking                  |
+| :x:                     |   010 | [Dijkstra Maze Solver](./src/010-maze-solver-astar.ipynb)                  | Graph      | Backtracking                  |
+| :x:                     |   010 | [A* Maze Solver](./src/010-maze-solver-astar.ipynb)                        | Graph      | Backtracking                  |
 
 # Types of Algorithm
 
