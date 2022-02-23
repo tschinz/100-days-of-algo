@@ -16,13 +16,13 @@ endif
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PYTHON_INTERPRETER = python
 CONDA_ENV_NAME = daysofalgo
+CONDA_ENV_FILE = condaenv.yml
 
 ###########################################################################
 # OS Specifics                                                            #
 ###########################################################################
 ifeq ($(detected_OS),Windows)
 	PDFVIEWER = 'start "" /max'
-	CONDA_ENV_FILE = condaenv-win.yml
 ifeq (,$(shell where conda))
 	HAS_CONDA = False
 else
@@ -40,7 +40,6 @@ endif
 
 ifeq ($(detected_OS),Darwin)
 	PDFVIEWER = open
-	CONDA_ENV_FILE = condaenv-mac-arm64.yml
 ifeq (,$(shell which conda))
 	HAS_CONDA = False
 else
@@ -53,7 +52,6 @@ endif
 
 ifeq ($(detected_OS),Linux)
 	PDFVIEWER = xdg-open
-	CONDA_ENV_FILE = condaenv-linux.yml
 ifeq (,$(shell which conda))
 	HAS_CONDA = False
 else
@@ -92,6 +90,18 @@ endif
 conda-export: ## export conda environment
 	@conda env export > $(CONDA_ENV_FILE)
 	@echo ">>> Conda environment '$(CONDA_ENV_NAME)' exported."
+
+build: ## build jupyterbook html files
+	@$(CONDA_ACTIVATE) && cd jupyterbook && jupyter-book build .
+	@echo ">>> Build Jupyterbook"
+
+view: ## view html files
+	@$(PDFVIEWER) jupyterbook/_build/html/index.html &
+	@echo ">>> Open Jupyterbook"
+
+clean: ## clen generated file
+	@rm -R jupyterbook/_build
+	@echo ">>> Removed jupyterbook/_build/ folder"
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; \
