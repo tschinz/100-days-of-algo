@@ -43,7 +43,7 @@ jobs:
 
     - name: switch base env name to something other than 'base'
       run: |
-        sed 's/name: base/name: jupyter/' jupyterbookenv > conda_jupyter_env.yml
+        sed 's/name: base/name: jupyter/' jupyterbookenv.yml > conda_jupyter_env.yml
 
     - name: Miniconda / Miniforge
       uses: conda-incubator/setup-miniconda@v2

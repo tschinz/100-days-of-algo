@@ -6,14 +6,14 @@
   <br>
 </h1>
 
-https://img.shields.io/badge/Jupyterbook-online-orange?url=https://tschinz.github.io/days-of-algo
+[![Jupyterbook online](https://img.shields.io/badge/Jupyterbook-online-orange)](https://tschinz.github.io/days-of-algo)
 
 # Table of contents
 
 [Description](#description) •
 [Rules](#rules) •
 [Algorithms](#algorithms) •
-[Credits](#credits) •
+[Credits](#credits)
 
 # Description
 
@@ -35,7 +35,7 @@ The individual challenges should take as less time as possible therefore a high 
 
 Each Algorithm is in its own jupyter notebook and [hosted on github](tschinz.github.io/days-of-algo) via [jupyterbook](https://jupyterbook.org/intro.html).
 
-https://img.shields.io/badge/Jupyterbook-online-orange?url=https://tschinz.github.io/days-of-algo
+[![Jupyterbook online](https://img.shields.io/badge/Jupyterbook-online-orange)](https://tschinz.github.io/days-of-algo)
 
 # Credits
 
