@@ -1,10 +1,10 @@
 format: jb-book
-root: 01-intro
+root: 01-index
 parts:
 
-- caption: Algorithms
+- caption:
   chapters:
-  - file: 02-types-of-algo
+  - file: 02-algorithms
     sections:
     - file: notebooks/000-hanoi-tower
     - file: notebooks/001-matrix-chain-multiplication
@@ -17,7 +17,7 @@ parts:
     - file: notebooks/008-maze-generation-kruskal
     - file: notebooks/009-maze-solver-lee
 
-- caption: Bibliography
+- caption:
   chapters:
   - file: bibliography
 
