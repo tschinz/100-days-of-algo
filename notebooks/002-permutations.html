@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All permutations and next permutation &#8212; Days of Algo</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/customize.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/font_button.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Counting 1 Bits" href="003-counting-1bits.html" />
+    <link rel="prev" title="Matrix Chain Multiplication" href="001-matrix-chain-multiplication.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/days-of-algo-icon.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Days of Algo</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-intro.html">
+   Days of Algo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algorithms
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../02-types-of-algo.html">
+   Types of Algorithm
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="000-hanoi-tower.html">
+     Hanoi tower
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="001-matrix-chain-multiplication.html">
+     Matrix Chain Multiplication
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     All permutations and next permutation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="003-counting-1bits.html">
+     Counting 1 Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="004-eratosthenes-sieve.html">
+     Prime numbers with Eratosthenes sieve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="005-binary-addition-fsm.html">
+     Binary addition FSM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="006-binary-search.html">
+     Binary Search
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="007-union-find.html">
+     Union-find
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="008-maze-generation-kruskal.html">
+     Maze Generation (Kruskal’s Algorithm)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="009-maze-solver-lee.html">
+     Maze Solver with Lee’s Algorithm
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bibliography
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <button type="button" onclick="legibleFontSwitcher()">Switch Font</button>&nbsp;&nbsp;<button type="button" onclick="fontScaler(1.1)">&#10133;</button><button type="button" onclick="fontScaler(0.0)">&#9679;</button><button type="button" onclick="fontScaler(0.909)">&#10134;</button>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/002-permutations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tschinz/days-of-algo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=tree/notebooks/002-permutations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-permutation">
+   Next Permutation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-permuations">
+   All Permuations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-possible-permutations">
+     Number of possible permutations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programatical-reflections">
+   Programatical reflections
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test">
+   Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-library-itertools">
+   With library itertools
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>All permutations and next permutation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-permutation">
+   Next Permutation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-permuations">
+   All Permuations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-possible-permutations">
+     Number of possible permutations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programatical-reflections">
+   Programatical reflections
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test">
+   Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#with-library-itertools">
+   With library itertools
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="all-permutations-and-next-permutation">
+<h1>All permutations and next permutation<a class="headerlink" href="#all-permutations-and-next-permutation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="next-permutation">
+<h2>Next Permutation<a class="headerlink" href="#next-permutation" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Permutation">Permutation</a> is the act of arranging members into a sequence or linear order. For example each combination of a Rubik’s cube is one individual permutation.
+In this exercise a totally ordered set is given and the next permutation needs to be found.</p>
+<div class="math notranslate nohighlight">
+\[NEXT \rightarrow NETX  \rightarrow NXTE \rightarrow NXET \rightarrow \cdots \]</div>
+<div class="section" id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<p>The algo is simple</p>
+<ul class="simple">
+<li><p>beginning from the end, find the longest decreasing sequence 42<strong>531</strong></p></li>
+<li><p>denote the preceding item as pivot 4<strong>2</strong>531.</p></li>
+<li><p>Swap pivot with the smallest higher item 4<strong>3</strong>5<strong>2</strong>1 in the sequence</p></li>
+<li><p>revert the sequence 43<strong>125</strong>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="all-permuations">
+<h2>All Permuations<a class="headerlink" href="#all-permuations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="number-of-possible-permutations">
+<h3>Number of possible permutations<a class="headerlink" href="#number-of-possible-permutations" title="Permalink to this headline">¶</a></h3>
+<p>Important here is how large is the set (<span class="math notranslate nohighlight">\(n\)</span>) and how many no-repeating objects create the permutation <span class="math notranslate nohighlight">\(r\)</span>. In the case above “NEXT” has 4 elements (<span class="math notranslate nohighlight">\(n=4\)</span>) and we need to choose 4 of them (r = 4).</p>
+<div class="math notranslate nohighlight">
+\[P_{(n,r)} = \frac{n!}{(n-r)!}\]</div>
+<p>if elements can be repeated than the formula changes</p>
+<div class="math notranslate nohighlight">
+\[P_{(n,r)} = n^r\]</div>
+<p>if <span class="math notranslate nohighlight">\(n = r\)</span></p>
+<div class="math notranslate nohighlight">
+\[P_{(n)} = n!\]</div>
+<p>In the example case</p>
+<div class="math notranslate nohighlight">
+\[ P = 4! = 4*3*2*1 = 24\]</div>
+</div>
+<div class="section" id="id1">
+<h3>Solution<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><img alt="permutationexample" src="../_images/002-permutations.svg" /></p>
+</div>
+</div>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="programatical-reflections">
+<h2>Programatical reflections<a class="headerlink" href="#programatical-reflections" title="Permalink to this headline">¶</a></h2>
+<p>In python string characters have values and can be compared against each other</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="s2">&quot;12ABab&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&lt;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&lt;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&lt;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&lt;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&lt;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">values</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;+----------lowest value&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;|       +--highest value&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;|       |&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0-9A-Za-z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1&lt;2 is True
+2&lt;A is True
+A&lt;B is True
+B&lt;a is True
+a&lt;b is True
++----------lowest value
+|       +--highest value
+|       |
+0-9A-Za-z
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="algorithm">
+<h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">permute</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">premutations</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]):</span>
+  <span class="sd">&quot;&quot;&quot;Find all permutations of a given string of characters and place them in a list</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">      string (str): string of characters in any perticular order</span>
+<span class="sd">      prefix (str, optional): [description]. Defaults to &#39;&#39;.</span>
+<span class="sd">      premutations (list, optional): [description]. Defaults to [].</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">      [type]: [description]</span>
+<span class="sd">  &quot;&quot;&quot;</span>  
+  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">premutations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)):</span>
+      <span class="n">rem</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+      <span class="n">permute</span><span class="p">(</span><span class="n">rem</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">premutations</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">allPermutations</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;List all possible permutations for a given list of values</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">      string (str): list of characters in any perticular order</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">number_of_permutations</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">number_of_permutations</span><span class="p">)</span>
+  <span class="n">permutations</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">permute</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">permutations</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">permutations</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="test">
+<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_with_duplicates</span> <span class="o">=</span> <span class="n">allPermutations</span><span class="p">(</span><span class="s2">&quot;NEXTT&quot;</span><span class="p">)</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">results_with_duplicates</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">results_with_duplicates</span><span class="p">)):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All elements are unique&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results_with_duplicates</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Clean up duplicates&quot;</span><span class="p">)</span>
+<span class="n">results_without_duplicates</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">results_with_duplicates</span><span class="p">)</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">results_with_duplicates</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">results_with_duplicates</span><span class="p">)):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All elements are unique&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results_without_duplicates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+[&#39;NEXTT&#39;, &#39;NEXTT&#39;, &#39;NETXT&#39;, &#39;NETTX&#39;, &#39;NETXT&#39;, &#39;NETTX&#39;, &#39;NXETT&#39;, &#39;NXETT&#39;, &#39;NXTET&#39;, &#39;NXTTE&#39;, &#39;NXTET&#39;, &#39;NXTTE&#39;, &#39;NTEXT&#39;, &#39;NTETX&#39;, &#39;NTXET&#39;, &#39;NTXTE&#39;, &#39;NTTEX&#39;, &#39;NTTXE&#39;, &#39;NTEXT&#39;, &#39;NTETX&#39;, &#39;NTXET&#39;, &#39;NTXTE&#39;, &#39;NTTEX&#39;, &#39;NTTXE&#39;, &#39;ENXTT&#39;, &#39;ENXTT&#39;, &#39;ENTXT&#39;, &#39;ENTTX&#39;, &#39;ENTXT&#39;, &#39;ENTTX&#39;, &#39;EXNTT&#39;, &#39;EXNTT&#39;, &#39;EXTNT&#39;, &#39;EXTTN&#39;, &#39;EXTNT&#39;, &#39;EXTTN&#39;, &#39;ETNXT&#39;, &#39;ETNTX&#39;, &#39;ETXNT&#39;, &#39;ETXTN&#39;, &#39;ETTNX&#39;, &#39;ETTXN&#39;, &#39;ETNXT&#39;, &#39;ETNTX&#39;, &#39;ETXNT&#39;, &#39;ETXTN&#39;, &#39;ETTNX&#39;, &#39;ETTXN&#39;, &#39;XNETT&#39;, &#39;XNETT&#39;, &#39;XNTET&#39;, &#39;XNTTE&#39;, &#39;XNTET&#39;, &#39;XNTTE&#39;, &#39;XENTT&#39;, &#39;XENTT&#39;, &#39;XETNT&#39;, &#39;XETTN&#39;, &#39;XETNT&#39;, &#39;XETTN&#39;, &#39;XTNET&#39;, &#39;XTNTE&#39;, &#39;XTENT&#39;, &#39;XTETN&#39;, &#39;XTTNE&#39;, &#39;XTTEN&#39;, &#39;XTNET&#39;, &#39;XTNTE&#39;, &#39;XTENT&#39;, &#39;XTETN&#39;, &#39;XTTNE&#39;, &#39;XTTEN&#39;, &#39;TNEXT&#39;, &#39;TNETX&#39;, &#39;TNXET&#39;, &#39;TNXTE&#39;, &#39;TNTEX&#39;, &#39;TNTXE&#39;, &#39;TENXT&#39;, &#39;TENTX&#39;, &#39;TEXNT&#39;, &#39;TEXTN&#39;, &#39;TETNX&#39;, &#39;TETXN&#39;, &#39;TXNET&#39;, &#39;TXNTE&#39;, &#39;TXENT&#39;, &#39;TXETN&#39;, &#39;TXTNE&#39;, &#39;TXTEN&#39;, &#39;TTNEX&#39;, &#39;TTNXE&#39;, &#39;TTENX&#39;, &#39;TTEXN&#39;, &#39;TTXNE&#39;, &#39;TTXEN&#39;, &#39;TNEXT&#39;, &#39;TNETX&#39;, &#39;TNXET&#39;, &#39;TNXTE&#39;, &#39;TNTEX&#39;, &#39;TNTXE&#39;, &#39;TENXT&#39;, &#39;TENTX&#39;, &#39;TEXNT&#39;, &#39;TEXTN&#39;, &#39;TETNX&#39;, &#39;TETXN&#39;, &#39;TXNET&#39;, &#39;TXNTE&#39;, &#39;TXENT&#39;, &#39;TXETN&#39;, &#39;TXTNE&#39;, &#39;TXTEN&#39;, &#39;TTNEX&#39;, &#39;TTNXE&#39;, &#39;TTENX&#39;, &#39;TTEXN&#39;, &#39;TTXNE&#39;, &#39;TTXEN&#39;]
+Clean up duplicates
+{&#39;ENTXT&#39;, &#39;TXENT&#39;, &#39;XNTET&#39;, &#39;NTXTE&#39;, &#39;XTNTE&#39;, &#39;NTEXT&#39;, &#39;TETNX&#39;, &#39;TNETX&#39;, &#39;NTETX&#39;, &#39;TTXEN&#39;, &#39;TXTNE&#39;, &#39;TXETN&#39;, &#39;ETNXT&#39;, &#39;XTETN&#39;, &#39;TNEXT&#39;, &#39;XNTTE&#39;, &#39;XETTN&#39;, &#39;XTENT&#39;, &#39;TXTEN&#39;, &#39;NTTEX&#39;, &#39;XTTNE&#39;, &#39;TNTEX&#39;, &#39;TTNEX&#39;, &#39;EXTTN&#39;, &#39;EXNTT&#39;, &#39;TNXTE&#39;, &#39;TENTX&#39;, &#39;XENTT&#39;, &#39;TTNXE&#39;, &#39;ETNTX&#39;, &#39;TEXTN&#39;, &#39;TTENX&#39;, &#39;ETXTN&#39;, &#39;ETXNT&#39;, &#39;NTTXE&#39;, &#39;TNXET&#39;, &#39;NEXTT&#39;, &#39;XNETT&#39;, &#39;EXTNT&#39;, &#39;TETXN&#39;, &#39;XTTEN&#39;, &#39;TXNTE&#39;, &#39;TTEXN&#39;, &#39;TXNET&#39;, &#39;NETXT&#39;, &#39;TNTXE&#39;, &#39;TEXNT&#39;, &#39;XTNET&#39;, &#39;NXETT&#39;, &#39;ENXTT&#39;, &#39;TTXNE&#39;, &#39;NETTX&#39;, &#39;NXTET&#39;, &#39;NTXET&#39;, &#39;ETTNX&#39;, &#39;XETNT&#39;, &#39;TENXT&#39;, &#39;ENTTX&#39;, &#39;ETTXN&#39;, &#39;NXTTE&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="with-library-itertools">
+<h2>With library itertools<a class="headerlink" href="#with-library-itertools" title="Permalink to this headline">¶</a></h2>
+<p>with duplicates</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">string_permutations</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="s1">&#39;IGIT&#39;</span><span class="p">)</span>
+<span class="n">permutations_with_duplicates</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">string_permutations</span><span class="p">:</span>
+    <span class="n">permutations_with_duplicates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">permutations_with_duplicates</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">permutations_with_duplicates</span><span class="p">)):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All elements are unique&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">permutations_with_duplicates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;IGIT&#39;, &#39;IGTI&#39;, &#39;IIGT&#39;, &#39;IITG&#39;, &#39;ITGI&#39;, &#39;ITIG&#39;, &#39;GIIT&#39;, &#39;GITI&#39;, &#39;GIIT&#39;, &#39;GITI&#39;, &#39;GTII&#39;, &#39;GTII&#39;, &#39;IIGT&#39;, &#39;IITG&#39;, &#39;IGIT&#39;, &#39;IGTI&#39;, &#39;ITIG&#39;, &#39;ITGI&#39;, &#39;TIGI&#39;, &#39;TIIG&#39;, &#39;TGII&#39;, &#39;TGII&#39;, &#39;TIIG&#39;, &#39;TIGI&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>without duplicates</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">permutations_without_duplicates</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">permutations_with_duplicates</span><span class="p">)</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">permutations_without_duplicates</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">permutations_without_duplicates</span><span class="p">)):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All elements are unique&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">permutations_with_duplicates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>All elements are unique
+[&#39;IGIT&#39;, &#39;IGTI&#39;, &#39;IIGT&#39;, &#39;IITG&#39;, &#39;ITGI&#39;, &#39;ITIG&#39;, &#39;GIIT&#39;, &#39;GITI&#39;, &#39;GIIT&#39;, &#39;GITI&#39;, &#39;GTII&#39;, &#39;GTII&#39;, &#39;IIGT&#39;, &#39;IITG&#39;, &#39;IGIT&#39;, &#39;IGTI&#39;, &#39;ITIG&#39;, &#39;ITGI&#39;, &#39;TIGI&#39;, &#39;TIIG&#39;, &#39;TGII&#39;, &#39;TGII&#39;, &#39;TIIG&#39;, &#39;TIGI&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="001-matrix-chain-multiplication.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Matrix Chain Multiplication</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="003-counting-1bits.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Counting 1 Bits</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Silvan Zahno<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
