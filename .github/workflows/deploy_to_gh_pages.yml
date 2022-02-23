@@ -50,7 +50,7 @@ jobs:
       with:
           miniconda-version: latest
           environment-file: conda_jupyter_env.yml
-          activate-environment: jupyterbook-env
+          activate-environment: jupyter
           python-version: 3.8
           use-only-tar-bz2: true # IMPORTANT: This needs to be set for caching to work properly!
 
