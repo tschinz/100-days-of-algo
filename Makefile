@@ -15,8 +15,8 @@ endif
 
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PYTHON_INTERPRETER = python
-CONDA_ENV_NAME = daysofalgo
-CONDA_ENV_FILE = condaenv.yml
+CONDA_ENV_NAME = jupyterbook-env
+CONDA_ENV_FILE = jupyterbookenv.yml
 
 ###########################################################################
 # OS Specifics                                                            #

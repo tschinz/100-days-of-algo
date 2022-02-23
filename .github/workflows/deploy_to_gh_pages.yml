@@ -43,14 +43,14 @@ jobs:
 
     - name: switch base env name to something other than 'base'
       run: |
-        sed 's/name: base/name: jupyter/' condaenv.yml > conda_jupyter_env.yml
+        sed 's/name: base/name: jupyter/' jupyterbookenv > conda_jupyter_env.yml
 
     - name: Miniconda / Miniforge
       uses: conda-incubator/setup-miniconda@v2
       with:
           miniconda-version: latest
           environment-file: conda_jupyter_env.yml
-          activate-environment: daysofalgo
+          activate-environment: jupyterbook-env
           python-version: 3.8
           use-only-tar-bz2: true # IMPORTANT: This needs to be set for caching to work properly!
 
