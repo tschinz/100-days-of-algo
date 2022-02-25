@@ -6,16 +6,7 @@ parts:
   chapters:
   - file: 02-algorithms
     sections:
-    - file: notebooks/000-hanoi-tower
-    - file: notebooks/001-matrix-chain-multiplication
-    - file: notebooks/002-permutations
-    - file: notebooks/003-counting-1bits
-    - file: notebooks/004-eratosthenes-sieve
-    - file: notebooks/005-binary-addition-fsm
-    - file: notebooks/006-binary-search
-    - file: notebooks/007-union-find
-    - file: notebooks/008-maze-generation-kruskal
-    - file: notebooks/009-maze-solver-lee
+    - glob: notebooks/*
 
 - caption:
   chapters:
