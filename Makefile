@@ -91,7 +91,7 @@ conda-export: ## export conda environment
 	@conda env export > $(CONDA_ENV_FILE)
 	@echo ">>> Conda environment '$(CONDA_ENV_NAME)' exported."
 
-build: ## build jupyterbook html files
+html: ## build jupyterbook html files
 	@$(CONDA_ACTIVATE) && cd jupyterbook && jupyter-book build .
 	@echo ">>> Build Jupyterbook"
 

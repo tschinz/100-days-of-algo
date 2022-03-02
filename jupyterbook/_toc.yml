@@ -4,7 +4,11 @@ parts:
 
 - caption:
   chapters:
-  - file: 02-algorithms
+  - file: 02-big_o
+
+- caption:
+  chapters:
+  - file: 03-algorithms
     sections:
     - glob: notebooks/*
 
