@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Days of Algo</title>
+    <title>Big O notation &#8212; Days of Algo</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -47,8 +47,19 @@
     <script src="_static/font_button.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Algorithms" href="03-algorithms.html" />
+    <link rel="prev" title="Days of Algo" href="01-index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -92,9 +103,9 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="02-big_o.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Big O notation
   </a>
  </li>
@@ -212,6 +223,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/02-big_o.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -241,6 +269,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-common-runtimes">
+   Some common runtimes
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -248,30 +289,124 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Big O notation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-common-runtimes">
+   Some common runtimes
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
+  <div class="tex2jax_ignore mathjax_ignore section" id="big-o-notation">
+<h1>Big O notation<a class="headerlink" href="#big-o-notation" title="Permalink to this headline">¶</a></h1>
+<p>The Big O notation indicates how fast an algorithms is. It is the worst case evaluation of the given algorithms. In short, how many iterations are needed in the worst case.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">O</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="o">^</span> <span class="o">^</span>
+  <span class="o">|</span> <span class="o">+--</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">operations</span>
+  <span class="o">+----</span> <span class="n">Big</span> <span class="n">O</span>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+</pre></div>
+</div>
+<p>A list of algorithms with theirs Big O notation can be found at <a class="reference external" href="https://big-o.io">https://big-o.io</a>.</p>
+<div class="figure align-default" id="big-o-algorithms">
+<a class="reference internal image-reference" href="_images/big-o-graph.svg"><img alt="_images/big-o-graph.svg" src="_images/big-o-graph.svg" width="80%" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Source: <a class="reference external" href="https://big-o.io">https://big-o.io</a></span><a class="headerlink" href="#big-o-algorithms" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="some-common-runtimes">
+<h2>Some common runtimes<a class="headerlink" href="#some-common-runtimes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(O(log\;n)\)</span> - also known as <em>log time</em></p>
+<ul>
+<li><p><a class="reference internal" href="notebooks/006-binary-search.html"><span class="doc std std-doc">Binary Search</span></a></p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(O(n)\)</span> - also known as linear time</p>
+<ul>
+<li><p>Simple search</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(O(n\;*\;log\;n)\)</span> - fast sorting algorithms</p>
+<ul>
+<li><p>quicksort</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(O(n^2)\)</span> - slow sorting algorihtms</p>
+<ul>
+<li><p>selection sort</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(O(n!)\)</span> - very slow algorithms</p>
+<ul>
+<li><p>traveling salesperson</p></li>
+</ul>
+</li>
+</ul>
+<div class="figure align-default" id="big-o-complexity">
+<a class="reference internal image-reference" href="_images/big-o-complexity.png"><img alt="_images/big-o-complexity.png" src="_images/big-o-complexity.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Source: <a class="reference external" href="https://www.bigocheatsheet.com">https://www.bigocheatsheet.com</a></span><a class="headerlink" href="#big-o-complexity" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="big-o-comparison">
+<a class="reference internal image-reference" href="_images/big-o-comparison_1.png"><img alt="_images/big-o-comparison_1.png" src="_images/big-o-comparison_1.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Source: <a class="reference external" href="https://medium.com/&#64;cparusso/what-the-hell-is-big-o-notation-9b90d9f9cd14">https://medium.com/&#64;cparusso/what-the-hell-is-big-o-notation-9b90d9f9cd14</a></span><a class="headerlink" href="#big-o-comparison" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="01-index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Days of Algo</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="03-algorithms.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Algorithms</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

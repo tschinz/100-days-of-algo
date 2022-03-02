@@ -58,7 +58,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Maze Solver with Dijkstra’s Algorithm" href="011-maze-solver-astar.html" />
+    <link rel="next" title="Maze Solver with A* Algorithm" href="011-maze-solver-astar.html" />
     <link rel="prev" title="Maze Solver with Lee’s Algorithm" href="009-maze-solver-lee.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -103,9 +103,16 @@
   </a>
  </li>
 </ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-big_o.html">
+   Big O notation
+  </a>
+ </li>
+</ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../02-algorithms.html">
+  <a class="reference internal" href="../03-algorithms.html">
    Algorithms
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -171,7 +178,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="011-maze-solver-astar.html">
-     Maze Solver with Dijkstra’s Algorithm
+     Maze Solver with A* Algorithm
     </a>
    </li>
   </ul>
@@ -262,7 +269,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=tree/notebooks/010-maze-solver-dijkstra.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/notebooks/010-maze-solver-dijkstra.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -391,7 +398,12 @@
 <h1>Maze Solver with Dijkstra’s Algorithm<a class="headerlink" href="#maze-solver-with-dijkstras-algorithm" title="Permalink to this headline">¶</a></h1>
 <p><img alt="Maze" src="../_images/010-maze-solved.png" /></p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Djikstra’s Algorithm</a> give always an optimal solution based on a <a class="reference external" href="https://en.wikipedia.org/wiki/Breadth-first_search">bread-first-search</a> and queues. It is an improvement over the previous <a class="reference internal" href="009-maze-solver-lee.html"><span class="doc std std-doc">Lee’s Algorithms</span></a>, since the distance (costs) to the starting point is kept updated in a queue.</p>
-<p>Dijkstra’s Algorithm has a time complexity of <span class="math notranslate nohighlight">\((E log V)\)</span></p>
+<p>Dijkstra’s Algorithm has different time complexities depending in the queue implementation, where <span class="math notranslate nohighlight">\(|E|\)</span> = number of edges and <span class="math notranslate nohighlight">\(|V|\)</span> number of nodes.</p>
+<ul class="simple">
+<li><p>Fibonacci heap: <span class="math notranslate nohighlight">\(O(|E| + |V| log |V|)\)</span></p></li>
+<li><p>binary heap: <span class="math notranslate nohighlight">\(O((|E| + |V|) log |V|)\)</span></p></li>
+<li><p>unsorted array: <span class="math notranslate nohighlight">\(O(|V|^2)\)</span></p></li>
+</ul>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p><img alt="Dijkstra's Algorithms Demo" src="../_images/010-dijkstra_maze_animation.gif" /></p></th>
@@ -477,6 +489,7 @@ Fibonacci Heap maintains a pointer to minimum value (which is root of a tree). A
 <div class="section" id="additional-information">
 <h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
 <p>Washington University paper <a class="reference external" href="https://github.com/tschinz/days-of-algo/blob/master/jupyterbook/notebooks/resources/010-dijkstra_data_structures_cse326.pdf">CSE326: Data Structures Dijkstra Algorithm</a> (James Fogarty, 2007).
+<span class="xref std std-doc">A different page</span>
 For a maze where the next possible vertex are up, down, left and right with the same distance/costs the dijkstra ha no real advantage over lee.</p>
 </div>
 <div class="section" id="imports">
@@ -1444,7 +1457,7 @@ Length of the Shortest Path is 243
     <a class='right-next' id="next-link" href="011-maze-solver-astar.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Maze Solver with Dijkstra’s Algorithm</p>
+        <p class="prev-next-title">Maze Solver with A* Algorithm</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
