@@ -58,7 +58,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Bibliography" href="../bibliography.html" />
+    <link rel="next" title="Diffie Hellman (DH) Key Exchange" href="012-diffie-hellman-key-exchange.html" />
     <link rel="prev" title="Maze Solver with Dijkstra’s Algorithm" href="010-maze-solver-dijkstra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -179,6 +179,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Maze Solver with A* Algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="012-diffie-hellman-key-exchange.html">
+     Diffie Hellman (DH) Key Exchange
     </a>
    </li>
   </ul>
@@ -480,7 +485,7 @@ Fibonacci Heap maintains a pointer to minimum value (which is root of a tree). A
 </table>
 <div class="section" id="pseudo-code">
 <h3>Pseudo code<a class="headerlink" href="#pseudo-code" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span>// A* (star) Pathfinding
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// A* (star) Pathfinding
 // Initialize both open and closed list
 let the openList equal empty list of nodes
 let the closedList equal empty list of nodes
@@ -1141,7 +1146,7 @@ while the openList is not empty
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Source Cell is      : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">src</span><span class="p">))</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Destination Cell is : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dst</span><span class="p">))</span>
   
-  <span class="c1"># execute lees algorithms</span>
+  <span class="c1"># execute A* algorithm</span>
   <span class="n">f</span> <span class="o">=</span> <span class="n">aStar</span><span class="p">(</span><span class="n">maze</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
 
   <span class="c1"># draw points and solution</span>
@@ -1544,10 +1549,10 @@ Length of the Shortest Path is 144
             <p class="prev-next-title">Maze Solver with Dijkstra’s Algorithm</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="012-diffie-hellman-key-exchange.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Diffie Hellman (DH) Key Exchange</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1558,7 +1563,7 @@ Length of the Shortest Path is 144
     <footer class="footer">
   <p>
     
-      By Silvan Zahno<br/>
+      By tschinz with ❤️<br/>
     
   </p>
 </footer>

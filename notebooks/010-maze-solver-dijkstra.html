@@ -181,6 +181,11 @@
      Maze Solver with A* Algorithm
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="012-diffie-hellman-key-exchange.html">
+     Diffie Hellman (DH) Key Exchange
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -488,9 +493,8 @@ Fibonacci Heap maintains a pointer to minimum value (which is root of a tree). A
 </div>
 <div class="section" id="additional-information">
 <h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
-<p>Washington University paper <a class="reference external" href="https://github.com/tschinz/days-of-algo/blob/master/jupyterbook/notebooks/resources/010-dijkstra_data_structures_cse326.pdf">CSE326: Data Structures Dijkstra Algorithm</a> (James Fogarty, 2007).
-<span class="xref std std-doc">A different page</span>
-For a maze where the next possible vertex are up, down, left and right with the same distance/costs the dijkstra ha no real advantage over lee.</p>
+<p>Washington University paper <a class="reference external" href="https://github.com/tschinz/days-of-algo/blob/master/jupyterbook/notebooks/resources/010-dijkstra_data_structures_cse326.pdf">CSE326: Data Structures Dijkstra Algorithm</a> (James Fogarty, 2007).</p>
+<p>For a maze where the next possible vertex are up, down, left and right with the same distance/costs the dijkstra ha no real advantage over lee.</p>
 </div>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
@@ -1051,7 +1055,7 @@ For a maze where the next possible vertex are up, down, left and right with the 
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Source Cell is      : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">src</span><span class="p">))</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Destination Cell is : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dst</span><span class="p">))</span>
   
-  <span class="c1"># execute lees algorithms</span>
+  <span class="c1"># execute dijkstra&#39;s algorithms</span>
   <span class="n">solution</span> <span class="o">=</span> <span class="n">dijkstra</span><span class="p">(</span><span class="n">maze</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
   
   <span class="c1"># draw points and solution</span>
@@ -1468,7 +1472,7 @@ Length of the Shortest Path is 243
     <footer class="footer">
   <p>
     
-      By Silvan Zahno<br/>
+      By tschinz with ❤️<br/>
     
   </p>
 </footer>

@@ -23,20 +23,21 @@ The individual challenges should take as less time as possible therefore a high 
 
 ## Algorithms
 
-| Done | #Algo | Name                                                                           | Topic      | Algorithm Type                |
-| ---- | ----- | ------------------------------------------------------------------------------ | ---------- | ----------------------------- |
-| ✅    |   000 | [Hanoi Tower](notebooks/000-hanoi-tower.ipynb)                                 | Game       | Recursive                     |
-| ❌    |   001 | [Matrix Chain Multiplication](notebooks/001-matrix-chain-multiplication.ipynb) | Math       |                               |
-| ✅    |   002 | [Permutations](notebooks/002-permutations.ipynb)                               | Math       | Recursive                     |
-| ✅    |   003 | [Counting 1-Bits](notebooks/003-counting-1bits.ipynb)                          | Digital    | Dynamic Programming           |
-| ✅    |   004 | [Eratosthenes Sieve Prime Numbers](notebooks/004-eratosthenes-sieve.ipynb)     | Math       | Brute Force                   |
-| ✅    |   005 | [Binary Addition FSM](notebooks/005-binary-addition-fsm.ipynb)                 | Digital    | Finite State Machine          |
-| ✅    |   006 | [Binary Search](notebooks/006-binary-search.ipynb)                             | Searching  | Divide and Conquer, Recursive |
-| ✅    |   007 | [Union Find](notebooks/007-union-find.ipynb)                                   | Graph      | Iterative                     |
-| ✅    |   008 | [Kruskal's Maze Generation](notebooks/008-maze-generation-kruskal.ipynb)       | Graph      | Greedy                        |
-| ✅    |   009 | [Lee's Maze Solver](notebooks/009-maze-solver-lee.ipynb)                       | Graph      | Backtracking                  |
-| ✅    |   010 | [Dijkstra Maze Solver](notebooks/010-maze-solver-dijkstra.ipynb)               | Graph      | Backtracking                  |
-| ✅    |   011 | [A* Maze Solver](notebooks/011-maze-solver-astar.ipynb)                        | Graph      | Backtracking                  |
+| Done | #Algo | Name                                                                            | Topic         | Algorithm Type                |
+| ---- | ----- | ------------------------------------------------------------------------------- | ------------- | ----------------------------- |
+| ✅    |   000 | [Hanoi Tower](notebooks/000-hanoi-tower.ipynb)                                 | Game          | Recursive                     |
+| ❌    |   001 | [Matrix Chain Multiplication](notebooks/001-matrix-chain-multiplication.ipynb) | Math          |                               |
+| ✅    |   002 | [Permutations](notebooks/002-permutations.ipynb)                               | Math          | Recursive                     |
+| ✅    |   003 | [Counting 1-Bits](notebooks/003-counting-1bits.ipynb)                          | Digital       | Dynamic Programming           |
+| ✅    |   004 | [Eratosthenes Sieve Prime Numbers](notebooks/004-eratosthenes-sieve.ipynb)     | Math          | Brute Force                   |
+| ✅    |   005 | [Binary Addition FSM](notebooks/005-binary-addition-fsm.ipynb)                 | Digital       | Finite State Machine          |
+| ✅    |   006 | [Binary Search](notebooks/006-binary-search.ipynb)                             | Searching     | Divide and Conquer, Recursive |
+| ✅    |   007 | [Union Find](notebooks/007-union-find.ipynb)                                   | Graph         | Iterative                     |
+| ✅    |   008 | [Kruskal's Maze Generation](notebooks/008-maze-generation-kruskal.ipynb)       | Graph         | Greedy                        |
+| ✅    |   009 | [Lee's Maze Solver](notebooks/009-maze-solver-lee.ipynb)                       | Graph         | Backtracking                  |
+| ✅    |   010 | [Dijkstra Maze Solver](notebooks/010-maze-solver-dijkstra.ipynb)               | Graph         | Backtracking                  |
+| ✅    |   011 | [A* Maze Solver](notebooks/011-maze-solver-astar.ipynb)                        | Graph         | Backtracking                  |
+| ✅    |   011 | [Diffie Hellman Key Exchange](notebooks/012-diffie_hellman-key-exchange.ipynb) | Cryptography  | Mathematics                   |
 
 (section:credits)=
 ## Credits
