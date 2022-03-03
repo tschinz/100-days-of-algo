@@ -1,6 +1,6 @@
 # Book settings
 title: Days of Algo
-author: Silvan Zahno
+author: tschinz with ❤️
 copyright: "2021"  # Copyright year to be placed in the footer
 logo: img/days-of-algo-icon.svg
 exclude_patterns: ["README.md"]
@@ -11,7 +11,7 @@ latex:
 
 html:
 #  home_page_in_navbar option: true
-  extra_navbar: <button type="button" onclick="legibleFontSwitcher()">Switch Font</button>&nbsp;&nbsp;<button type="button" onclick="fontScaler(1.1)">&#10133;</button><button type="button" onclick="fontScaler(0.0)">&#9679;</button><button type="button" onclick="fontScaler(0.909)">&#10134;</button>  
+  extra_navbar: <button type="button" onclick="legibleFontSwitcher()">Switch Font</button>&nbsp;&nbsp;<button type="button" onclick="fontScaler(1.1)">&#10133;</button><button type="button" onclick="fontScaler(0.0)">&#9679;</button><button type="button" onclick="fontScaler(0.909)">&#10134;</button>
 
   use_repository_button: true
 
@@ -25,7 +25,7 @@ sphinx:
 
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-    myst_enable_extensions: 
+    myst_enable_extensions:
     - amsmath
     - colon_fence
     - deflist
@@ -43,7 +43,7 @@ repository:
 
 launch_buttons:
   # switch this off when droplet is not active
-  #jupyterhub_url: "https://emsc4033-2021.rses.underworldcloud.org"  # The URL for your JupyterHub. 
+  #jupyterhub_url: "https://emsc4033-2021.rses.underworldcloud.org"  # The URL for your JupyterHub.
   binderhub_url:  "https://mybinder.org"  # The URL of the BinderHub (e.g., https://mybinder.org)
   notebook_interface: "jupyterlab" # "jupyterlab" or "classic"
 
