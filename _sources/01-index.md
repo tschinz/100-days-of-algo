@@ -37,7 +37,7 @@ The individual challenges should take as less time as possible therefore a high 
 | ✅    |   009 | [Lee's Maze Solver](notebooks/009-maze-solver-lee.ipynb)                       | Graph         | Backtracking                  |
 | ✅    |   010 | [Dijkstra Maze Solver](notebooks/010-maze-solver-dijkstra.ipynb)               | Graph         | Backtracking                  |
 | ✅    |   011 | [A* Maze Solver](notebooks/011-maze-solver-astar.ipynb)                        | Graph         | Backtracking                  |
-| ✅    |   011 | [Diffie Hellman Key Exchange](notebooks/012-diffie_hellman-key-exchange.ipynb) | Cryptography  | Mathematics                   |
+| ✅    |   012 | [Diffie Hellman Key Exchange](notebooks/012-diffie-hellman-key-exchange.ipynb) | Cryptography  | Mathematics                   |
 
 (section:credits)=
 ## Credits
