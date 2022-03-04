@@ -186,6 +186,11 @@
      Diffie Hellman (DH) Key Exchange
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="013-enigma-machine.html">
+     Enigma Machine Emulator
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -368,9 +373,15 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="binary-addition-fsm">
 <h1>Binary addition FSM<a class="headerlink" href="#binary-addition-fsm" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Binary_number#Addition">Binary Addition</a> can be solved with an <a class="reference external" href="https://en.wikipedia.org/wiki/Finite-state_machine">FSM</a> (Finite State Machine). The addition itself is similar than a normal decimal addition except that there are only 4 possible outcomes.</p>
-<p><img alt="binary addition" src="../_images/005-binary-addition.svg" /></p>
+<div class="figure align-default" id="binary-addition">
+<a class="reference internal image-reference" href="../_images/005-binary-addition.svg"><img alt="../_images/005-binary-addition.svg" src="../_images/005-binary-addition.svg" width="30%" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Binary Addition</span><a class="headerlink" href="#binary-addition" title="Permalink to this image">¶</a></p>
+</div>
 <p>In digital electronic it is solved as follows:</p>
-<p><img alt="binary adder" src="../_images/005-binary-adder.svg" /></p>
+<div class="figure align-default" id="binary-adder">
+<a class="reference internal image-reference" href="../_images/005-binary-adder.svg"><img alt="../_images/005-binary-adder.svg" src="../_images/005-binary-adder.svg" width="100%" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Binary Adder Schematic</span><a class="headerlink" href="#binary-adder" title="Permalink to this image">¶</a></p>
+</div>
 <p>There are more efficient resp. quicker implementation for but the sake of simplicity the above implementaion is best.</p>
 <p>The eight outcome state of the binary addition blocs are:</p>
 <table class="colwidths-auto table">
@@ -436,7 +447,10 @@
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
 <p>Outcome has 4 states depending on <span class="math notranslate nohighlight">\(q_i = 0,1\)</span> <span class="math notranslate nohighlight">\(c_{i+1} = 0,1\)</span></p>
-<p><img alt="binary adder" src="../_images/005-binary-addition-fsm.svg" /></p>
+<div class="figure align-default" id="binary-adder-fsm">
+<a class="reference internal image-reference" href="../_images/005-binary-addition-fsm.svg"><img alt="../_images/005-binary-addition-fsm.svg" src="../_images/005-binary-addition-fsm.svg" width="50%" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Binary Adder FSM</span><a class="headerlink" href="#binary-adder-fsm" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>

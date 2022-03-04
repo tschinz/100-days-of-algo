@@ -186,6 +186,11 @@
      Diffie Hellman (DH) Key Exchange
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="013-enigma-machine.html">
+     Enigma Machine Emulator
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -415,7 +420,10 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="maze-solver-with-a-algorithm">
 <h1>Maze Solver with A* Algorithm<a class="headerlink" href="#maze-solver-with-a-algorithm" title="Permalink to this headline">¶</a></h1>
-<p><img alt="Maze" src="../_images/011-maze_solved.png" /></p>
+<div class="figure align-default" id="maze-solver-a">
+<a class="reference internal image-reference" href="../_images/011-maze_solved.png"><img alt="../_images/011-maze_solved.png" src="../_images/011-maze_solved.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Maze Solver A* Source: Wikipedia</span><a class="headerlink" href="#maze-solver-a" title="Permalink to this image">¶</a></p>
+</div>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/A*_search_algorithm">A* Algorithm</a> give always an optimal solution based on a <a class="reference external" href="https://en.wikipedia.org/wiki/Breadth-first_search">bread-first-search</a> and queues. It is an extension over the previous <a class="reference internal" href="009-maze-solver-lee.html"><span class="doc std std-doc">Lee’s Algorithms</span></a> and <a class="reference internal" href="010-maze-solver-dijkstra.html"><span class="doc std std-doc">Dijkstra’s Algorithms</span></a>, and uses heuristics to guide its search.</p>
 <p>A* Algorithm has the in the worst case the same time complexity as Dijkstra which is depending on the queue implementation, where <span class="math notranslate nohighlight">\(|E|\)</span> = number of edges and <span class="math notranslate nohighlight">\(|V|\)</span> number of nodes.</p>
 <ul class="simple">
@@ -424,16 +432,10 @@
 <li><p>unsorted array: <span class="math notranslate nohighlight">\(O(|V|^2)\)</span></p></li>
 </ul>
 <p>But A* is based on heuristics which helps to find a more optimal solution much quicker.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="A* Algorithms Demo" src="../_images/011-astar_maze_animation.gif" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: Wikipedia</p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="a-algorithms-demo">
+<a class="reference internal image-reference" href="../_images/011-astar_maze_animation.gif"><img alt="../_images/011-astar_maze_animation.gif" src="../_images/011-astar_maze_animation.gif" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">A* Algorithms Demo Source: Wikipedia</span><a class="headerlink" href="#a-algorithms-demo" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="terminology">
 <h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -459,30 +461,18 @@
 <p>With Heap Collection method such as Binomial or Fibonacci Heap to collect the trees the algorithm can be more time efficient.</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_heap">Fibonacci Head</a> is a datastructure for priority queue operation.
 Fibonacci Heap maintains a pointer to minimum value (which is root of a tree). All tree roots are connected using circular doubly linked list, so all of them can be accessed using single ‘min’ pointer.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Fibonacci Heap" src="../_images/010-fibonacci_heap.png" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: Wikipedia</p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/010-fibonacci_heap.png"><img alt="../_images/010-fibonacci_heap.png" src="../_images/010-fibonacci_heap.png" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Fibonacci Heap Source: Wikipedia</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
 <p>Flowchart of the solution</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Fibonacci Heap" src="../_images/011-astar_flowchart.png" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: <a class="reference external" href="https://www.laurentluce.com/posts/solving-mazes-using-python-simple-recursivity-and-a-search/">Laurence Luce</a></p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="a-flowchart">
+<a class="reference internal image-reference" href="../_images/011-astar_flowchart.png"><img alt="../_images/011-astar_flowchart.png" src="../_images/011-astar_flowchart.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">A* Flowchart Source: Wikipedia</span><a class="headerlink" href="#a-flowchart" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="pseudo-code">
 <h3>Pseudo code<a class="headerlink" href="#pseudo-code" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// A* (star) Pathfinding

@@ -186,6 +186,11 @@
      Diffie Hellman (DH) Key Exchange
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="013-enigma-machine.html">
+     Enigma Machine Emulator
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -401,7 +406,10 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="maze-solver-with-dijkstras-algorithm">
 <h1>Maze Solver with Dijkstra’s Algorithm<a class="headerlink" href="#maze-solver-with-dijkstras-algorithm" title="Permalink to this headline">¶</a></h1>
-<p><img alt="Maze" src="../_images/010-maze-solved.png" /></p>
+<div class="figure align-default" id="maze-solution-dijkstra">
+<a class="reference internal image-reference" href="../_images/010-maze-solved.png"><img alt="../_images/010-maze-solved.png" src="../_images/010-maze-solved.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Dijkstra Maze Solution</span><a class="headerlink" href="#maze-solution-dijkstra" title="Permalink to this image">¶</a></p>
+</div>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Djikstra’s Algorithm</a> give always an optimal solution based on a <a class="reference external" href="https://en.wikipedia.org/wiki/Breadth-first_search">bread-first-search</a> and queues. It is an improvement over the previous <a class="reference internal" href="009-maze-solver-lee.html"><span class="doc std std-doc">Lee’s Algorithms</span></a>, since the distance (costs) to the starting point is kept updated in a queue.</p>
 <p>Dijkstra’s Algorithm has different time complexities depending in the queue implementation, where <span class="math notranslate nohighlight">\(|E|\)</span> = number of edges and <span class="math notranslate nohighlight">\(|V|\)</span> number of nodes.</p>
 <ul class="simple">
@@ -409,57 +417,33 @@
 <li><p>binary heap: <span class="math notranslate nohighlight">\(O((|E| + |V|) log |V|)\)</span></p></li>
 <li><p>unsorted array: <span class="math notranslate nohighlight">\(O(|V|^2)\)</span></p></li>
 </ul>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Dijkstra's Algorithms Demo" src="../_images/010-dijkstra_maze_animation.gif" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: Wikipedia</p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="maze-solver-dijkstra">
+<a class="reference internal image-reference" href="../_images/010-dijkstra_maze_animation.gif"><img alt="../_images/010-dijkstra_maze_animation.gif" src="../_images/010-dijkstra_maze_animation.gif" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Maze Solver Dijkstra Source: Wikipedia</span><a class="headerlink" href="#maze-solver-dijkstra" title="Permalink to this image">¶</a></p>
+</div>
 <p>The graph is has 2 elements: vertices and edges.</p>
 <div class="section" id="fibonacci-heap">
 <h2>Fibonacci Heap<a class="headerlink" href="#fibonacci-heap" title="Permalink to this headline">¶</a></h2>
 <p>With Heap Collection method such as Binomial or Fibonacci Heap to collect the trees the algorithm can be more time efficient.</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_heap">Fibonacci Head</a> is a datastructure for priority queue operation.
 Fibonacci Heap maintains a pointer to minimum value (which is root of a tree). All tree roots are connected using circular doubly linked list, so all of them can be accessed using single ‘min’ pointer.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Fibonacci Heap" src="../_images/010-fibonacci_heap.png" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: Wikipedia</p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="fibonacci-head">
+<a class="reference internal image-reference" href="../_images/010-fibonacci_heap.png"><img alt="../_images/010-fibonacci_heap.png" src="../_images/010-fibonacci_heap.png" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Fibonacci Heap Source: Wikipedia</span><a class="headerlink" href="#fibonacci-head" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Dijstra Solver" src="../_images/010-dijkstra_solver.gif" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: Wikipedia</p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="dijkstra-solver-step-by-step">
+<a class="reference internal image-reference" href="../_images/010-dijkstra_solver.gif"><img alt="../_images/010-dijkstra_solver.gif" src="../_images/010-dijkstra_solver.gif" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Dijkstra Solver Step by Step Source: Wikipedia</span><a class="headerlink" href="#dijkstra-solver-step-by-step" title="Permalink to this image">¶</a></p>
+</div>
 <ul>
 <li><p>Start with a weighted graph</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Dijstra Solver" src="../_images/010-graph_1.svg" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Based on <a class="reference external" href="https://www.algotree.org/algorithms/single_source_shortest_path/dijkstras_shortest_path_c++/">Algotree.org</a></p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="dijkstra-weighted-graph">
+<a class="reference internal image-reference" href="../_images/010-graph_1.svg"><img alt="../_images/010-graph_1.svg" src="../_images/010-graph_1.svg" width="70%" /></a>
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Dijkstra weighted graph, based on <a class="reference external" href="https://www.algotree.org/algorithms/single_source_shortest_path/dijkstras_shortest_path_c++/">Algotree.org</a></span><a class="headerlink" href="#dijkstra-weighted-graph" title="Permalink to this image">¶</a></p>
+</div>
 </li>
 <li><p>Choose the start vertex and assign infinity path values to all other devices</p></li>
 <li><p>Got to each adjacent vertex and update its path length</p>

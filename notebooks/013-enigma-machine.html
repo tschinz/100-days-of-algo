@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Counting 1 Bits &#8212; Days of Algo</title>
+    <title>Enigma Machine Emulator &#8212; Days of Algo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -58,8 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Prime numbers with Eratosthenes sieve" href="004-eratosthenes-sieve.html" />
-    <link rel="prev" title="All permutations and next permutation" href="002-permutations.html" />
+    <link rel="next" title="Bibliography" href="../bibliography.html" />
+    <link rel="prev" title="Diffie Hellman (DH) Key Exchange" href="012-diffie-hellman-key-exchange.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -136,8 +136,8 @@
      All permutations and next permutation
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="003-counting-1bits.html">
      Counting 1 Bits
     </a>
    </li>
@@ -186,8 +186,8 @@
      Diffie Hellman (DH) Key Exchange
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="013-enigma-machine.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Enigma Machine Emulator
     </a>
    </li>
@@ -241,7 +241,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/003-counting-1bits.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/013-enigma-machine.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -279,7 +279,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/notebooks/003-counting-1bits.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/notebooks/013-enigma-machine.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -302,8 +302,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   Solution
+  <a class="reference internal nav-link" href="#terminology">
+   Terminology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   Algorithm
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -312,7 +317,7 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithm">
+  <a class="reference internal nav-link" href="#id1">
    Algorithm
   </a>
  </li>
@@ -331,7 +336,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Counting 1 Bits</h1>
+                <h1>Enigma Machine Emulator</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -342,8 +347,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   Solution
+  <a class="reference internal nav-link" href="#terminology">
+   Terminology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   Algorithm
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -352,7 +362,7 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithm">
+  <a class="reference internal nav-link" href="#id1">
    Algorithm
   </a>
  </li>
@@ -370,100 +380,53 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="counting-1-bits">
-<h1>Counting 1 Bits<a class="headerlink" href="#counting-1-bits" title="Permalink to this headline">¶</a></h1>
-<p>Many times you need to count the number of ones or zeros in a number. Let’s take as example <span class="math notranslate nohighlight">\(123_{10} = 1111011_2\)</span>. There are 6 ones and 1 zero.</p>
-<p>You can place a single bit mask and run over the number and count non-zero results. But with that solution you loop over ones and zeros.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">k</span><span class="p">)</span>
-</pre></div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="enigma-machine-emulator">
+<h1>Enigma Machine Emulator<a class="headerlink" href="#enigma-machine-emulator" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default" id="key-exchange">
+<a class="reference internal image-reference" href="../_images/013-enigma_machine.jpg"><img alt="../_images/013-enigma_machine.jpg" src="../_images/013-enigma_machine.jpg" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Source: Wikipedia</span><a class="headerlink" href="#key-exchange" title="Permalink to this image">¶</a></p>
 </div>
-<p>It is possible to count only the ones and ignoring the zeros, meaning only performing 6 iteration instead of 7</p>
-<div class="section" id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<p>Bitwise and of value and value-1 <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">&amp;</span> <span class="pre">value-1</span></code> until <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1111011_2 \\
-\frac{\&amp;\;1111010_2}{\;\;\;\;1111010_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1111010_2 \\
-\frac{\&amp;\;1111001_2}{\;\;\;\;1111000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1111000_2 \\
-\frac{\&amp;\;1110111_2}{\;\;\;\;1110000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1110000_2 \\
-\frac{\&amp;\;1101111_2}{\;\;\;\;1100000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1100000_2 \\
-\frac{\&amp;\;1011111_2}{\;\;\;\;1000000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1000000_2 \\
-\frac{\&amp;\;0111111}{\;\;\;\;0000000_2} \\
-\end{split}\]</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Enigma_machine">Enigma Machine</a> is the most powerful cipher machine used by Nazi Germany during the World War II. It has an electromechanical design which can scramble 26 Letters. When you press a button the corresponding light according to the enigma setting is lit up. It was invented by <a class="reference external" href="https://en.wikipedia.org/wiki/Arthur_Scherbius">Arthur Scherbius</a> and <a class="reference external" href="https://de.wikipedia.org/wiki/Ernst_Richard_Ritter">Richard Ritter</a>.</p>
+<p>If plain test is entered, it is encoded into ciphertext and if ciphertext is entered the plain text is displayed. The encryption is based on <a class="reference external" href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar Cipher</a>.  It is one of the simplest and most widely used encryption techniques. The Alphabet is shifted by <span class="math notranslate nohighlight">\(k\)</span> which connects different letters together. This means for a given cipher the letters always correspond to each other.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Caesar cipher offers nowadays essentially no communication security.</p>
+</div>
+<div class="figure align-default" id="caesar-cipher">
+<a class="reference internal image-reference" href="../_images/013-caesar_cipher.svg"><img alt="../_images/013-caesar_cipher.svg" src="../_images/013-caesar_cipher.svg" width="40%" /></a>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Caesar Cipher with <span class="math notranslate nohighlight">\(k = 3\)</span> Source: Wikipedia</span><a class="headerlink" href="#caesar-cipher" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Steckerbrett - “Plugboard” in front of the machine to connect two different letters together. This is an extra scramble layer</p></li>
+<li><p>Rotors - located between the Plugboard and the Reflector, the three Rotors left, middle and right can be set to a given position to achieve a different scrambling</p></li>
+<li><p>Reflector - The Reflector receives the signals from the left Rotor and sends it back to him, the Reflector scrambling can not be changed.</p></li>
+</ul>
+</div>
+<div class="section" id="algorithm">
+<h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
+<p>The Enigma Machine works in a similar fashion with a more complex structure.</p>
+<div class="figure align-default" id="enigma-diagram">
+<a class="reference internal image-reference" href="../_images/013-enigma_diagram.jpg"><img alt="../_images/013-enigma_diagram.jpg" src="../_images/013-enigma_diagram.jpg" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Enigma Diagram Source: Louise Dade</span><a class="headerlink" href="#enigma-diagram" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">itertools</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="algorithm">
-<h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_of_1bits</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-    <span class="k">while</span> <span class="n">value</span><span class="p">:</span>
-        <span class="c1"># Bitwise and of value and value-1</span>
-        <span class="n">value</span> <span class="o">&amp;=</span> <span class="n">value</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">n</span>
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="id1">
+<h2>Algorithm<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="test">
 <h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mb">0b1111011</span>
-<span class="n">number_of_ones</span> <span class="o">=</span> <span class="n">count_of_1bits</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are </span><span class="si">{}</span><span class="s2"> one&#39;s in 0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number_of_ones</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b1111011
-0b1111010
-0b1111000
-0b1110000
-0b1100000
-0b1000000
-0b0
-There are 6 one&#39;s in 0b1111011
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -492,17 +455,17 @@ There are 6 one&#39;s in 0b1111011
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="002-permutations.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="012-diffie-hellman-key-exchange.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">All permutations and next permutation</p>
+            <p class="prev-next-title">Diffie Hellman (DH) Key Exchange</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="004-eratosthenes-sieve.html" title="next page">
+    <a class='right-next' id="next-link" href="../bibliography.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Prime numbers with Eratosthenes sieve</p>
+        <p class="prev-next-title">Bibliography</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

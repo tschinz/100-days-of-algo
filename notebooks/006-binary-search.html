@@ -186,6 +186,11 @@
      Diffie Hellman (DH) Key Exchange
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="013-enigma-machine.html">
+     Enigma Machine Emulator
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -374,16 +379,10 @@
 <li><p>So if <span class="math notranslate nohighlight">\(k=x\,times\)</span> you can multiply <span class="math notranslate nohighlight">\(1\)</span> by <span class="math notranslate nohighlight">\(2\)</span> until you get to <span class="math notranslate nohighlight">\(n\)</span></p></li>
 <li><p>Reversing logic: <span class="math notranslate nohighlight">\(k=x\,of\,times\)</span> you can divide <span class="math notranslate nohighlight">\(n\)</span> by <span class="math notranslate nohighlight">\(2\)</span> until you get to <span class="math notranslate nohighlight">\(1\)</span></p></li>
 </ul>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="binary search complexity" src="../_images/006-binary-search-complexity.svg" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: Wikipedia</p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="binary-search-complexity">
+<a class="reference internal image-reference" href="../_images/006-binary-search-complexity.svg"><img alt="../_images/006-binary-search-complexity.svg" src="../_images/006-binary-search-complexity.svg" width="80%" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Binary search complexity Source: Wikipedia</span><a class="headerlink" href="#binary-search-complexity" title="Permalink to this image">¶</a></p>
+</div>
 <p>The basic steps are:</p>
 <ul class="simple">
 <li><p>Begin with an interval covering the whole array</p></li>
@@ -391,16 +390,10 @@
 <li><p>Otherwise, narrow it to the upper half</p></li>
 <li><p>Repeatedly check until the value is found or the interval is empty.</p></li>
 </ul>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="binary search depiction" src="../_images/006-binary-search-depiction.svg" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Source: Wikipedia</p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="binary-search-depiction">
+<a class="reference internal image-reference" href="../_images/006-binary-search-depiction.svg"><img alt="../_images/006-binary-search-depiction.svg" src="../_images/006-binary-search-depiction.svg" width="50%" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Binary search depiction Source: Wikipedia</span><a class="headerlink" href="#binary-search-depiction" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
 <p>Binary Search Algorithm basically ignores the half of the elements just after one comparison.</p>
