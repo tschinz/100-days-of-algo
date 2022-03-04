@@ -38,6 +38,7 @@ The individual challenges should take as less time as possible therefore a high 
 | ✅    |   010 | [Dijkstra Maze Solver](notebooks/010-maze-solver-dijkstra.ipynb)               | Graph         | Backtracking                  |
 | ✅    |   011 | [A* Maze Solver](notebooks/011-maze-solver-astar.ipynb)                        | Graph         | Backtracking                  |
 | ✅    |   012 | [Diffie Hellman Key Exchange](notebooks/012-diffie-hellman-key-exchange.ipynb) | Cryptography  | Mathematics                   |
+| ❌    |   013 | [Enigma Machine](notebooks/013-enigma-machine.ipynb)                           | Cryptography  | Caesar cipher                 |
 
 (section:credits)=
 ## Credits
