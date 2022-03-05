@@ -40,6 +40,35 @@ The individual challenges should take as less time as possible therefore a high 
 | ✅    |   012 | [Diffie Hellman Key Exchange](notebooks/012-diffie-hellman-key-exchange.ipynb) | Cryptography  | Mathematics                   |
 | ❌    |   013 | [Enigma Machine](notebooks/013-enigma-machine.ipynb)                           | Cryptography  | Caesar cipher                 |
 
+## List of interesting Algorithms
+
+List of Algo ideas I will or will not do next.
+
+* [Knapsack Problem](https://en.wikipedia.org/wiki/Knapsack_problem) with [Genetic Algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm)
+* [Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_algorithm)
+* [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
+* [Fibonacci Heap](https://en.wikipedia.org/wiki/Fibonacci_heap)
+* [Gray Code](https://en.wikipedia.org/wiki/Gray_code)
+* [Floyd Steinberg](https://en.wikipedia.org/wiki/Floyd–Steinberg_dithering)
+* [Pink Noise](https://en.wikipedia.org/wiki/Pink_noise)
+* [Blue Noise](https://en.wikipedia.org/wiki/Colors_of_noise#Blue_noise)
+* [White Noise](https://en.wikipedia.org/wiki/White_noise)
+* [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise)
+* [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+* [Sudoku](https://en.wikipedia.org/wiki/Sudoku)
+* [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform)
+* [Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter)
+* [QR Code](https://en.wikipedia.org/wiki/QR_code)
+* [Sorting Algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm) [see](https://dev.to/koladev/8-must-know-sorting-algorithms-5ja)
+  * [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
+  * [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
+  * [Insert Sort](https://en.wikipedia.org/wiki/Insertion_sort)
+  * [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
+  * [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
+  * [Bucket Sort](https://en.wikipedia.org/wiki/Bucket_sort)
+  * [Shell Sort](https://en.wikipedia.org/wiki/Shellsort)
+  * [Heap Sort](https://en.wikipedia.org/wiki/Heapsort)
+
 (section:credits)=
 ## Credits
 
