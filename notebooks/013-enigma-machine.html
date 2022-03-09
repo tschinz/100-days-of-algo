@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enigma Machine Emulator &#8212; Days of Algo</title>
+    <title>Enigma Virtual Machine &#8212; Days of Algo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -188,7 +188,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Enigma Machine Emulator
+     Enigma Virtual Machine
     </a>
    </li>
   </ul>
@@ -310,6 +310,18 @@
   <a class="reference internal nav-link" href="#algorithm">
    Algorithm
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotor-and-reflector-types">
+     Rotor and Reflector Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting">
+     Setting
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#imports">
@@ -336,7 +348,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Enigma Machine Emulator</h1>
+                <h1>Enigma Virtual Machine</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -355,6 +367,18 @@
   <a class="reference internal nav-link" href="#algorithm">
    Algorithm
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotor-and-reflector-types">
+     Rotor and Reflector Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting">
+     Setting
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#imports">
@@ -380,8 +404,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="enigma-machine-emulator">
-<h1>Enigma Machine Emulator<a class="headerlink" href="#enigma-machine-emulator" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="enigma-virtual-machine">
+<h1>Enigma Virtual Machine<a class="headerlink" href="#enigma-virtual-machine" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-default" id="key-exchange">
 <a class="reference internal image-reference" href="../_images/013-enigma_machine.jpg"><img alt="../_images/013-enigma_machine.jpg" src="../_images/013-enigma_machine.jpg" style="width: 50%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Source: Wikipedia</span><a class="headerlink" href="#key-exchange" title="Permalink to this image">¶</a></p>
@@ -399,17 +423,176 @@
 <div class="section" id="terminology">
 <h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Steckerbrett - “Plugboard” in front of the machine to connect two different letters together. This is an extra scramble layer</p></li>
-<li><p>Rotors - located between the Plugboard and the Reflector, the three Rotors left, middle and right can be set to a given position to achieve a different scrambling</p></li>
-<li><p>Reflector - The Reflector receives the signals from the left Rotor and sends it back to him, the Reflector scrambling can not be changed.</p></li>
+<li><p><strong>Steckerbrett</strong> - “Plugboard” in front of the machine to connect two different letters together. This is an extra scramble layer</p></li>
+<li><p><strong>Rotors</strong> - located between the Plugboard and the Reflector, the three Rotors left, middle and right can be set to a given position to achieve a different scrambling</p></li>
+<li><p><strong>Reflector</strong> - The Reflector receives the signals from the left Rotor and sends it back to him, the Reflector scrambling can not be changed. It allows the machine to encode and decode without changing any settings.</p></li>
 </ul>
 </div>
 <div class="section" id="algorithm">
 <h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
 <p>The Enigma Machine works in a similar fashion with a more complex structure.</p>
 <div class="figure align-default" id="enigma-diagram">
-<a class="reference internal image-reference" href="../_images/013-enigma_diagram.jpg"><img alt="../_images/013-enigma_diagram.jpg" src="../_images/013-enigma_diagram.jpg" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="../_images/013-enigma_diagram.jpg"><img alt="../_images/013-enigma_diagram.jpg" src="../_images/013-enigma_diagram.jpg" style="width: 80%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Enigma Diagram Source: Louise Dade</span><a class="headerlink" href="#enigma-diagram" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="rotor-and-reflector-types">
+<h3>Rotor and Reflector Types<a class="headerlink" href="#rotor-and-reflector-types" title="Permalink to this headline">¶</a></h3>
+<p>During the time the enigma was used, many different versions with different rotors, reflectors existed.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Setup</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">etw</span></code></p></td>
+<td><p>Rotor ETW</p></td>
+<td><p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p></td>
+<td><p>Enigma I</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ic</span></code></p></td>
+<td><p>Rotor IC</p></td>
+<td><p>DMTWSILRUYQNKFEJCAZBPGXOHV</p></td>
+<td><p>1924 Commercial Enigma A, B</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iic</span></code></p></td>
+<td><p>Rotor IIC</p></td>
+<td><p>HQZGPJTMOBLNCIFDYAWVEUSRKX</p></td>
+<td><p>1924 Commercial Enigma A, B</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">iic</span></code></p></td>
+<td><p>Rotor IIIC</p></td>
+<td><p>UQNTLSZFMREHDPXKIBVYGJCWOA</p></td>
+<td><p>1924 Commercial Enigma A, B</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ik</span></code></p></td>
+<td><p>Rotor I-K</p></td>
+<td><p>PEZUOHXSCVFMTBGLRINQJWAYDK</p></td>
+<td><p>February 1939 Swiss K</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">iik</span></code></p></td>
+<td><p>Rotor II-K</p></td>
+<td><p>ZOUESYDKFWPCIQXHMVBLGNJRAT</p></td>
+<td><p>February 1939 Swiss K</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iiik</span></code></p></td>
+<td><p>Rotor III-K</p></td>
+<td><p>EHRVXGAOBQUSIMZFLYNWKTPDJC</p></td>
+<td><p>February 1939 Swiss K</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ukwk</span></code></p></td>
+<td><p>Rotor UKW-K</p></td>
+<td><p>IMETCGFRAYSQBZXWLHKDVUPOJN</p></td>
+<td><p>February 1939 Swiss K</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">etwk</span></code></p></td>
+<td><p>Rotor ETW-K</p></td>
+<td><p>QWERTZUIOASDFGHJKPYXCVBNML</p></td>
+<td><p>February 1939 Swiss K</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">i</span></code></p></td>
+<td><p>Rotor I</p></td>
+<td><p>EKMFLGDQVZNTOWYHXUSPAIBRCJ</p></td>
+<td><p>1930 Enigma I</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ii</span></code></p></td>
+<td><p>Rotor II</p></td>
+<td><p>AJDKSIRUXBLHWTMCQGZNPYFVOE</p></td>
+<td><p>1930 Enigma I</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">iii</span></code></p></td>
+<td><p>Rotor III</p></td>
+<td><p>BDFHJLCPRTXVZNYEIWGAKMUSQO</p></td>
+<td><p>1930 Enigma I</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iv</span></code></p></td>
+<td><p>Rotor IV</p></td>
+<td><p>ESOVPZJAYQUIRHXLNFTGKDCMWB</p></td>
+<td><p>December 1938 M3 Army</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">v</span></code></p></td>
+<td><p>Rotor V</p></td>
+<td><p>VZBRGITYUPSDNHLXAWMJQOFECK</p></td>
+<td><p>December 1938 M3 Army</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vi</span></code></p></td>
+<td><p>Rotor VI</p></td>
+<td><p>JPGVOUMFYQBENHZRDKASXLICTW</p></td>
+<td><p>1939 M3 &amp; M4 Naval (FEB 1942)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">vii</span></code></p></td>
+<td><p>Rotor VII</p></td>
+<td><p>NZJHGRCXMYSWBOUFAIVLPEKQDT</p></td>
+<td><p>1939 M3 &amp; M4 Naval (FEB 1942)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">viii</span></code></p></td>
+<td><p>Rotor VIII</p></td>
+<td><p>FKQHTLXOCBJSPDZRAMEWNIUYGV</p></td>
+<td><p>1939 M3 &amp; M4 Naval (FEB 1942)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">beta</span></code></p></td>
+<td><p>Rotor Beta</p></td>
+<td><p>LEYJVCNIXWPBQMDRTAKZGFUHOS</p></td>
+<td><p>Spring 1941 M4 R2</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gamma</span></code></p></td>
+<td><p>Rotor Gamma</p></td>
+<td><p>FSOKANUERHMBTIYCWLQPZXVGJD</p></td>
+<td><p>Spring 1942 M4 R2</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span></code></p></td>
+<td><p>Reflector A</p></td>
+<td><p>EJMZALYXVBWFCRQUONTSPIKHGD</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+<td><p>Reflector B</p></td>
+<td><p>YRUHQSLDPXNGOKMIEBFZCWVJAT</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td><p>Reflector C</p></td>
+<td><p>FVPJIAOYEDRZXWGCTKUQSBNMHL</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bt</span></code></p></td>
+<td><p>Reflector B Thin</p></td>
+<td><p>ENKQAUYWJICOPBLMDXZVFTHRGS</p></td>
+<td><p>1940 M4 R1 (M3 + Thin)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ct</span></code></p></td>
+<td><p>Reflector C Thin</p></td>
+<td><p>RDOBJNTKVEHMLFCWZAXGYIPSUQ</p></td>
+<td><p>1940 M4 R1 (M3 + Thin)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">custom</span></code></p></td>
+<td><p>Custom</p></td>
+<td><p>as given by the user</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">random</span></code></p></td>
+<td><p>Random</p></td>
+<td><p>???</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="setting">
+<h3>Setting<a class="headerlink" href="#setting" title="Permalink to this headline">¶</a></h3>
+<p>in order to decrypt was another machine encrypted the following needs to be true:</p>
+<ul class="simple">
+<li><p>The same machine with the same number and types of rotors and reflector.</p></li>
+<li><p>Plugboard settings needs to be the same</p></li>
+<li><p>Same starting position of the rotors</p></li>
+</ul>
+<p>All these informations were changed daily, the  exact setup could be found in a monthly issued <code class="docutils literal notranslate"><span class="pre">codesheet</span></code>.</p>
+<div class="figure align-default" id="enigma-codesheet">
+<a class="reference internal image-reference" href="../_images/013-enigma_codesheet.jpg"><img alt="../_images/013-enigma_codesheet.jpg" src="../_images/013-enigma_codesheet.jpg" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Codesheet WWII Source: Nazis</span><a class="headerlink" href="#enigma-codesheet" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="imports">
@@ -424,9 +607,327 @@
 </div>
 <div class="section" id="id1">
 <h2>Algorithm<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Scrambler</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">startpos</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">custom</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a alphabet shuffle, this represents one rotor or a reflector. The configuration can be choosen from the first ever Enigma, the latest WWII Enigma machine, a Random pattern or a custom setting.</span>
+<span class="sd">    The reflector and rotor settings are according to Wikipedia https://en.wikipedia.org/wiki/Enigma_rotor_details:</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        type_key (str): type of enigma rotor [&quot;EI&quot;, &quot;alpha&quot;, &quot;beta&quot;, &quot;gamma&quot;, &quot;random&quot;, &quot;custom&quot;]</span>
+<span class="sd">        startpos (int, optional): rotor startposition. Defaults to 0.</span>
+<span class="sd">        custom (string, optional): string of chars representing the custom configuration. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Possible rotor configurations</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">configs</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s2">&quot;etw&quot;</span><span class="p">:</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ic&quot;</span> <span class="p">:</span> <span class="s2">&quot;DMTWSILRUYQNKFEJCAZBPGXOHV&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;iic&quot;</span> <span class="p">:</span> <span class="s2">&quot;HQZGPJTMOBLNCIFDYAWVEUSRKX&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;iiic&quot;</span><span class="p">:</span> <span class="s2">&quot;UQNTLSZFMREHDPXKIBVYGJCWOA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ik&quot;</span> <span class="p">:</span> <span class="s2">&quot;PEZUOHXSCVFMTBGLRINQJWAYDK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;iik&quot;</span> <span class="p">:</span> <span class="s2">&quot;ZOUESYDKFWPCIQXHMVBLGNJRAT&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;iiik&quot;</span><span class="p">:</span> <span class="s2">&quot;EHRVXGAOBQUSIMZFLYNWKTPDJC&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ikwk&quot;</span><span class="p">:</span> <span class="s2">&quot;IMETCGFRAYSQBZXWLHKDVUPOJN&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;etwk&quot;</span><span class="p">:</span> <span class="s2">&quot;QWERTZUIOASDFGHJKPYXCVBNML&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;i&quot;</span> <span class="p">:</span> <span class="s2">&quot;EKMFLGDQVZNTOWYHXUSPAIBRCJ&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ii&quot;</span><span class="p">:</span> <span class="s2">&quot;AJDKSIRUXBLHWTMCQGZNPYFVOE&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;iii&quot;</span><span class="p">:</span> <span class="s2">&quot;BDFHJLCPRTXVZNYEIWGAKMUSQO&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;iv&quot;</span><span class="p">:</span> <span class="s2">&quot;ESOVPZJAYQUIRHXLNFTGKDCMWB&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;v&quot;</span> <span class="p">:</span> <span class="s2">&quot;VZBRGITYUPSDNHLXAWMJQOFECK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;vi&quot;</span> <span class="p">:</span> <span class="s2">&quot;JPGVOUMFYQBENHZRDKASXLICTW&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;vii&quot;</span> <span class="p">:</span> <span class="s2">&quot;NZJHGRCXMYSWBOUFAIVLPEKQDT&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;viii&quot;</span> <span class="p">:</span> <span class="s2">&quot;FKQHTLXOCBJSPDZRAMEWNIUYGV&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;beta&quot;</span><span class="p">:</span> <span class="s2">&quot;LEYJVCNIXWPBQMDRTAKZGFUHOS&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;gamma&quot;</span> <span class="p">:</span> <span class="s2">&quot;FSOKANUERHMBTIYCWLQPZXVGJD&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;EJMZALYXVBWFCRQUONTSPIKHGD&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;b&quot;</span> <span class="p">:</span> <span class="s2">&quot;YRUHQSLDPXNGOKMIEBFZCWVJAT&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;FVPJIAOYEDRZXWGCTKUQSBNMHL&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;bt&quot;</span> <span class="p">:</span> <span class="s2">&quot;ENKQAUYWJICOPBLMDXZVFTHRGS&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ct&quot;</span>  <span class="p">:</span> <span class="s2">&quot;RDOBJNTKVEHMLFCWZAXGYIPSUQ&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;random&quot;</span><span class="p">:</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span><span class="p">,</span> <span class="c1"># Will be scrambled later</span>
+    <span class="p">}</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">type_key</span> <span class="o">=</span> <span class="n">type_key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">startpos</span> <span class="o">=</span> <span class="n">startpos</span>
+
+    <span class="c1"># get the key</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_key</span> <span class="o">==</span> <span class="s2">&quot;custom&quot;</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getConfig</span><span class="p">(</span><span class="n">custom</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getConfig</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">configs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">type_key</span><span class="p">])</span>
+
+    <span class="c1"># additional scramble in case of random</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_key</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+      <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformation</span><span class="p">)</span>
+
+    <span class="c1"># setup initial position of rotors</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">startpos</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getKey</span><span class="p">()</span>
+
+  <span class="k">def</span> <span class="nf">getConfig</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str_config</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transforms the string configuration into an int array</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        str_config (str): string of configuration. All alphabet characters need to be represented.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: list of int representing the alphabet positions of the config</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">str_config</span><span class="p">:</span>
+      <span class="n">config</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">config</span>
+
+  <span class="k">def</span> <span class="nf">getKey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the key of the current transformation config</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: string of characters of the current config</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">]</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span><span class="p">:</span>
+      <span class="n">key</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alphabet</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">key</span>
+  
+  <span class="k">def</span> <span class="nf">rol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Rotating shift left of a string by n characters</span>
+<span class="sd">       example: n=2</span>
+<span class="sd">       &quot;Test&quot; =&gt; &quot;stTe&quot;</span>
+<span class="sd">    Args:</span>
+<span class="sd">        string (str): input string</span>
+<span class="sd">        n (int): number of bits to shift</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: string rotated shift left by n chars</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">string</span><span class="p">[</span><span class="n">n</span><span class="p">:]</span> <span class="o">+</span> <span class="n">string</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
+
+  <span class="k">def</span> <span class="nf">passthrough</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Pass element through (index =&gt; element)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        idx (int): index of character index to return</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: new character index</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+  <span class="k">def</span> <span class="nf">passthroughRev</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Reverse Passthrough, enter character index and return list index</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       int: index of character index</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Rotate the rotors by one position</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformation</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">setTransformation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transformation</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set manually the tranformation. E.g. to reset the machine</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        transformation (list): transformation list to be used</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">transformation</span> <span class="o">=</span> <span class="n">transformation</span>
+
+
+<span class="k">class</span> <span class="nc">EnigmaMachine</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nb_rotors</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">rotor_types</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;random, random, random&quot;</span><span class="p">],</span> <span class="n">rotor_startpos</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">)],</span> <span class="n">rotor_custom_configs</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">reflector_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">plugboard_config</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">print_specialchars</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Enigma Virtual Machine</span>
+<span class="sd">        nb_rotors (int, optional): number of rotors in the machine. Defaults to 3.</span>
+<span class="sd">        rotor_types (list, optional): list of types rotors types [&quot;etw&quot;|&quot;ic&quot;|&quot;iic&quot;|&quot;iiic&quot;|&quot;ik&quot;|&quot;iik&quot;|&quot;iiik&quot;|&quot;ikwk&quot;|&quot;etwk&quot;|&quot;i&quot;|&quot;ii&quot;|&quot;iii&quot;|&quot;iv&quot;|&quot;v&quot;|&quot;vi&quot;|&quot;vii&quot;|&quot;viii&quot;|&quot;beta&quot;|&quot;gamma&quot;|&quot;random&quot;&quot;custom&quot;]. Needs to be size of nb_rotors. Defaults to [&quot;random&quot;, &quot;random&quot;, &quot;random&quot;].</span>
+<span class="sd">        rotor_startpos (list, optional): list of int representing thestart positions of the rotors. Needs to be the size of nb_rotors. Defaults to three random numbers between 0 -&gt; 25.</span>
+<span class="sd">        rotor_custom_configs (list, optional): list of int lists representing the custom rotor configuration, only needed if &quot;custom&quot; type is choosen. Needs to be the size of nb_rotors if used. Defaults to None</span>
+<span class="sd">        reflector_type (str, optional): type of reflector [&quot;a&quot;|&quot;b&quot;|&quot;c&quot;|&quot;bt&quot;|&quot;ct&quot;|&quot;random&quot;]. Defaults to &quot;random&quot;.</span>
+<span class="sd">        plugboard_config (list, optional): list of character combinations. Defaults to Nonee will result in A&lt;-&gt;Z, B&lt;-&gt;Y, ...</span>
+<span class="sd">        print_specialchars (bool, optional): Print characters missing by enigma. Defaults to False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span> <span class="o">=</span> <span class="n">nb_rotors</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rotor_types</span> <span class="o">=</span> <span class="n">rotor_types</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rotor_startpos</span> <span class="o">=</span> <span class="n">rotor_startpos</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rotor_custom_configs</span> <span class="o">=</span> <span class="n">rotor_custom_configs</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reflector_type</span> <span class="o">=</span> <span class="n">reflector_type</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">printspecialchars</span> <span class="o">=</span> <span class="n">print_specialchars</span>
+    <span class="k">if</span> <span class="n">plugboard_config</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">plugboard_config</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AZ&quot;</span><span class="p">,</span> <span class="s2">&quot;BY&quot;</span><span class="p">,</span> <span class="s2">&quot;CX&quot;</span><span class="p">,</span> <span class="s2">&quot;DW&quot;</span><span class="p">,</span> <span class="s2">&quot;EV&quot;</span><span class="p">,</span> <span class="s2">&quot;FU&quot;</span><span class="p">,</span> <span class="s2">&quot;GT&quot;</span><span class="p">,</span> <span class="s2">&quot;HS&quot;</span><span class="p">,</span> <span class="s2">&quot;IR&quot;</span><span class="p">,</span> <span class="s2">&quot;JQ&quot;</span><span class="p">,</span> <span class="s2">&quot;KP&quot;</span><span class="p">,</span> <span class="s2">&quot;LO&quot;</span><span class="p">,</span> <span class="s2">&quot;MN&quot;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">plugboard_config</span> <span class="o">=</span> <span class="n">plugboard_config</span>
+
+    <span class="c1"># create the rotors and reflector</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">original_rotors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reflector</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">plugboard</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">setupRotors</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">setupReflector</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">setupPlugboard</span><span class="p">()</span>
+
+  <span class="k">def</span> <span class="nf">setupRotors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Setup the rotors configuration</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span><span class="p">):</span>
+      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotor_custom_configs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Scrambler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotor_types</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotor_startpos</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Scrambler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotor_types</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotor_startpos</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotor_custom_configs</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">original_rotors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">transformation</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">setupReflector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Setup the reflector</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reflector</span> <span class="o">=</span> <span class="n">Scrambler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reflector_type</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">setupPlugboard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Setup the plugboard&quot;&quot;&quot;</span>
+    <span class="c1"># Transform into scrambler key</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">]</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">26</span>
+    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plugboard_config</span><span class="p">:</span>
+      <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">[:</span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span> <span class="o">+</span> <span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">key</span><span class="p">[</span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+      <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">[:</span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span> <span class="o">+</span> <span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">key</span><span class="p">[</span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">plugboard</span> <span class="o">=</span> <span class="n">Scrambler</span><span class="p">(</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">printEnigmaSetup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enigma Setup&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;============</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span><span class="p">):</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;* Rotor </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - Type      : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">type_key</span><span class="p">))</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - Key       : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">key</span><span class="p">))</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - StartPos  : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">startpos</span><span class="p">))</span>
+      
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;* Reflector&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - Type      : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reflector</span><span class="o">.</span><span class="n">type_key</span><span class="p">))</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reflector</span><span class="o">.</span><span class="n">type_key</span> <span class="o">==</span> <span class="s2">&quot;custom&quot;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">reflector</span><span class="o">.</span><span class="n">type_key</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - Key       : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reflector</span><span class="o">.</span><span class="n">key</span><span class="p">))</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - StartPos  : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reflector</span><span class="o">.</span><span class="n">startpos</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;* Plugboard&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - Key       : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plugboard_config</span><span class="p">))</span>
+
+  <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">setTransformation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">original_rotors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+  <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="n">ln</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">encrypted_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+      <span class="c1"># get char position in alphabet</span>
+      <span class="n">num</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">%</span> <span class="mi">97</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">25</span> <span class="ow">or</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="c1"># Special character</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">printspecialchars</span><span class="p">):</span>
+          <span class="n">encrypted_text</span> <span class="o">+=</span> <span class="n">l</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># encodable character</span>
+        <span class="n">ln</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># pass through plugboard</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plugboard</span><span class="o">.</span><span class="n">passthrough</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        
+        <span class="c1"># pass through rotors</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span><span class="p">):</span>
+          <span class="n">num</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">passthrough</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+        <span class="c1"># reflected by the reflector</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reflector</span><span class="o">.</span><span class="n">passthrough</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+        <span class="c1"># pass through rotors from the other side</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span><span class="p">):</span>
+          <span class="n">num</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">passthroughRev</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+        <span class="c1"># pass through plugboard from the other side</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plugboard</span><span class="o">.</span><span class="n">passthroughRev</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    
+        <span class="c1"># Encode character</span>
+        <span class="n">encrypted_text</span> <span class="o">+=</span> <span class="s2">&quot;&quot;</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">97</span> <span class="o">+</span> <span class="n">num</span><span class="p">)</span>
+
+        <span class="c1"># rotate the rotors</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span><span class="p">):</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">ln</span> <span class="o">%</span> <span class="p">((</span><span class="n">i</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">rotate</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">encrypted_text</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="test">
 <h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plaintext</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;The Enigma machines were a series of electro-mechanical rotor cipher machines developed and used in the early- to mid-20th century to protect commercial, </span>
+<span class="s2">diplomatic and military communication. Enigma was invented by the German engineer Arthur Scherbius at the end of World War I. </span>
+<span class="s2">Early models were used commercially from the early 1920s, and adopted by military and government services of several countries, </span>
+<span class="s2">most notably Nazi Germany before and during World War II. Several different Enigma models were produced, </span>
+<span class="s2">but the German military models, having a plugboard, were the most complex. Japanese and Italian models were also in use.&quot;&quot;&quot;</span>
+<span class="n">enigma</span> <span class="o">=</span> <span class="n">EnigmaMachine</span><span class="p">(</span><span class="n">nb_rotors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rotor_types</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;i&quot;</span><span class="p">,</span><span class="s2">&quot;beta&quot;</span><span class="p">,</span><span class="s2">&quot;gamma&quot;</span><span class="p">],</span> <span class="n">rotor_startpos</span><span class="o">=</span><span class="p">[</span><span class="mi">17</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span> <span class="n">reflector_type</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">print_specialchars</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">enigma</span><span class="o">.</span><span class="n">printEnigmaSetup</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Plaintext:</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">plaintext</span><span class="p">))</span>
+
+<span class="c1"># Encrypt</span>
+<span class="n">enigma</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">encrypted_text</span> <span class="o">=</span> <span class="n">enigma</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encrypted text:</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">encrypted_text</span><span class="p">))</span>
+
+<span class="c1"># Decrypt</span>
+<span class="n">enigma</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">plaintext</span> <span class="o">=</span> <span class="n">enigma</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encrypted_text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Plaintext:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">plaintext</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enigma Setup
+============
+
+* Rotor 0
+  - Type      : i
+  - Key       : USPAIBRCJEKMFLGDQVZNTOWYHX
+  - StartPos  : 17
+* Rotor 1
+  - Type      : beta
+  - Key       : HOSLEYJVCNIXWPBQMDRTAKZGFU
+  - StartPos  : 23
+* Rotor 2
+  - Type      : gamma
+  - Key       : TIYCWLQPZXVGJDFSOKANUERHMB
+  - StartPos  : 12
+* Reflector
+  - Type      : a
+* Plugboard
+  - Key       : [&#39;AZ&#39;, &#39;BY&#39;, &#39;CX&#39;, &#39;DW&#39;, &#39;EV&#39;, &#39;FU&#39;, &#39;GT&#39;, &#39;HS&#39;, &#39;IR&#39;, &#39;JQ&#39;, &#39;KP&#39;, &#39;LO&#39;, &#39;MN&#39;]
+
+Plaintext:
+The Enigma machines were a series of electro-mechanical rotor cipher machines developed and used in the early- to mid-20th century to protect commercial, 
+diplomatic and military communication. Enigma was invented by the German engineer Arthur Scherbius at the end of World War I. 
+Early models were used commercially from the early 1920s, and adopted by military and government services of several countries, 
+most notably Nazi Germany before and during World War II. Several different Enigma models were produced, 
+but the German military models, having a plugboard, were the most complex. Japanese and Italian models were also in use.
+
+Encrypted text:
+naw vhodvj ntgdxvku fvjo x oniygn zc atrwgbz-curbboxesa gwdpo fbfeco rlwjkfqv rsyqnmnsj mbw gqsa mj rrw aeksn- fi aws-20ex nhzwxal pc dlpntqn fmgyzylqqt, fwwqfxboiqe nhe wuxodrli wffwpuczdrrgy. skqxtf nrz uzzmfpxk yx rom iiehul felxiqcv zhmykn odnfujnpb ge pik mrt cv rmosi cpa d. hzffus sxghgk znlu znxm lfzjrqnxmzsr qgdg acy jgeki 1920w, ktf wkijbov xe qvbnwqbq wvh tpuqfdxtxb ummxkgjn th pocruin frzmkxpvj, ttbtc mnnddnl pnxo edjlsoh upqwqk hrt yqvuew jwvfu ikz zv. anrjcwu kjpwincbn aovlhb zxjkfy xkwd vujexemb, yifi awr qpxcmk yxbqolmj fpyzwn, ycqvqe c sdreqwfzi, kjxw kec ixvw fuyeshr. zkdpdodk ory guzixhg pysvmv dxea cooc lw hna.
+
+Plaintext:
+the enigma machines were a series of electro-mechanical rotor cipher machines developed and used in the early- to mid-20th century to protect commercial, kdiplomatic and military communication. enigma was invented by the german engineer arthur scherbius at the end of world war i. kearly models were used commercially from the early 1920s, and adopted by military and government services of several countries, kmost notably nazi germany before and during world war ii. several different enigma models were produced, kbut the german military models, having a plugboard, were the most complex. japanese and italian models were also in use.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
