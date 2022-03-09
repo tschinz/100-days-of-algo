@@ -799,6 +799,8 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">plugboard</span> <span class="o">=</span> <span class="n">Scrambler</span><span class="p">(</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
 
   <span class="k">def</span> <span class="nf">printEnigmaSetup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Print Enigma setup of plugboard, rotors and reflector</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enigma Setup&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;============</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -818,10 +820,20 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  - Key       : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plugboard_config</span><span class="p">))</span>
 
   <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Restart the original rotor start positions</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nb_rotors</span><span class="p">):</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">rotors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">setTransformation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">original_rotors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-  <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Encode and decode a string</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): string to encode</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str : depending on the input string, the encoded or decoded output</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">ln</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">encrypted_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
