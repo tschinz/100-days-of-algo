@@ -25,7 +25,7 @@ The individual challenges should take as less time as possible therefore a high 
 
 # Rules
 
-1. Everything can be a algo
+1. Everything can be an algo
 2. Make an effort to code everyday
 3. Focus on the challenges not the language
 4. Get every help possible
