@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Counting 1 Bits &#8212; Days of Algo</title>
+    <title>Algorithms &#8212; Days of Algo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -47,8 +47,6 @@
     <script src="../_static/font_button.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -56,10 +54,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://tschinz.github.io/days-of-algo/content/03-algorithms.html" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Prime numbers with Eratosthenes sieve" href="004-eratosthenes-sieve.html" />
-    <link rel="prev" title="All permutations and next permutation" href="002-permutations.html" />
+    <link rel="next" title="Hanoi tower" href="notebooks/000-hanoi-tower.html" />
+    <link rel="prev" title="Big O notation" href="02-big_o.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,21 +98,21 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-index.html">
+  <a class="reference internal" href="01-index.html">
    Days of Algo
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-big_o.html">
+  <a class="reference internal" href="02-big_o.html">
    Big O notation
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../03-algorithms.html">
+  <a class="current reference internal" href="#">
    Algorithms
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -120,75 +120,80 @@
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="000-hanoi-tower.html">
+    <a class="reference internal" href="notebooks/000-hanoi-tower.html">
      Hanoi tower
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="001-matrix-chain-multiplication.html">
+    <a class="reference internal" href="notebooks/001-matrix-chain-multiplication.html">
      Matrix Chain Multiplication
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="002-permutations.html">
+    <a class="reference internal" href="notebooks/002-permutations.html">
      All permutations and next permutation
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks/003-counting-1bits.html">
      Counting 1 Bits
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="004-eratosthenes-sieve.html">
+    <a class="reference internal" href="notebooks/004-eratosthenes-sieve.html">
      Prime numbers with Eratosthenes sieve
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="005-binary-addition-fsm.html">
+    <a class="reference internal" href="notebooks/005-binary-addition-fsm.html">
      Binary addition FSM
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="006-binary-search.html">
+    <a class="reference internal" href="notebooks/006-binary-search.html">
      Binary Search
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="007-union-find.html">
+    <a class="reference internal" href="notebooks/007-union-find.html">
      Union-find
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="008-maze-generation-kruskal.html">
+    <a class="reference internal" href="notebooks/008-maze-generation-kruskal.html">
      Maze Generation (Kruskal’s Algorithm)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="009-maze-solver-lee.html">
+    <a class="reference internal" href="notebooks/009-maze-solver-lee.html">
      Maze Solver with Lee’s Algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="010-maze-solver-dijkstra.html">
+    <a class="reference internal" href="notebooks/010-maze-solver-dijkstra.html">
      Maze Solver with Dijkstra’s Algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="011-maze-solver-astar.html">
+    <a class="reference internal" href="notebooks/011-maze-solver-astar.html">
      Maze Solver with A* Algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="012-diffie-hellman-key-exchange.html">
+    <a class="reference internal" href="notebooks/012-diffie-hellman-key-exchange.html">
      Diffie Hellman (DH) Key Exchange
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="013-enigma-machine.html">
+    <a class="reference internal" href="notebooks/013-enigma-machine.html">
      Enigma Virtual Machine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks/014-sorting-algorithms.html">
+     Sorting Algorithms
     </a>
    </li>
   </ul>
@@ -196,7 +201,7 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../bibliography.html">
+  <a class="reference internal" href="bibliography.html">
    Bibliography
   </a>
  </li>
@@ -241,9 +246,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/003-counting-1bits.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/03-algorithms.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -260,8 +265,13 @@
             href="https://github.com/tschinz/days-of-algo"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/tschinz/days-of-algo/issues/new?title=Issue%20on%20page%20%2Fcontent/03-algorithms.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/tschinz/days-of-algo/edit/master/jupyterbook/content/03-algorithms.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -274,23 +284,6 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/notebooks/003-counting-1bits.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
@@ -302,24 +295,41 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   Solution
+  <a class="reference internal nav-link" href="#types-of-algorithm">
+   Types of Algorithm
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithm">
-   Algorithm
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#test">
-   Test
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursive-algorithm">
+     Recursive Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#divide-and-conquer">
+     Divide and Conquer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dynamic-programming-algorithm">
+     Dynamic Programming Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#greedy-algorithm">
+     Greedy Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#brute-force-algorithms">
+     Brute Force Algorithms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#backtracking-algorithms">
+     Backtracking Algorithms
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -331,7 +341,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Counting 1 Bits</h1>
+                <h1>Algorithms</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -342,24 +352,41 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   Solution
+  <a class="reference internal nav-link" href="#types-of-algorithm">
+   Types of Algorithm
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imports">
-   Imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithm">
-   Algorithm
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#test">
-   Test
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursive-algorithm">
+     Recursive Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#divide-and-conquer">
+     Divide and Conquer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dynamic-programming-algorithm">
+     Dynamic Programming Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#greedy-algorithm">
+     Greedy Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#brute-force-algorithms">
+     Brute Force Algorithms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#backtracking-algorithms">
+     Backtracking Algorithms
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -370,100 +397,60 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="counting-1-bits">
-<h1>Counting 1 Bits<a class="headerlink" href="#counting-1-bits" title="Permalink to this headline">¶</a></h1>
-<p>Many times you need to count the number of ones or zeros in a number. Let’s take as example <span class="math notranslate nohighlight">\(123_{10} = 1111011_2\)</span>. There are 6 ones and 1 zero.</p>
-<p>You can place a single bit mask and run over the number and count non-zero results. But with that solution you loop over ones and zeros.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">k</span><span class="p">)</span>
-</pre></div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="algorithms">
+<h1>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="types-of-algorithm">
+<h2>Types of Algorithm<a class="headerlink" href="#types-of-algorithm" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="recursive-algorithm">
+<h3>Recursive Algorithm<a class="headerlink" href="#recursive-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>An algorithms which calls itself with a smaller value as input for solving the current input. In short, it’s an Algorithm that calls itself repeatedly until the problem is solved.</p>
+<p>Problems such as the Tower of Hanoi or DFS of a Graph can be easily solved by using these Algorithms.</p>
 </div>
-<p>It is possible to count only the ones and ignoring the zeros, meaning only performing 6 iteration instead of 7</p>
-<div class="section" id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<p>Bitwise and of value and value-1 <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">&amp;</span> <span class="pre">value-1</span></code> until <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1111011_2 \\
-\frac{\&amp;\;1111010_2}{\;\;\;\;1111010_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1111010_2 \\
-\frac{\&amp;\;1111001_2}{\;\;\;\;1111000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1111000_2 \\
-\frac{\&amp;\;1110111_2}{\;\;\;\;1110000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1110000_2 \\
-\frac{\&amp;\;1101111_2}{\;\;\;\;1100000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1100000_2 \\
-\frac{\&amp;\;1011111_2}{\;\;\;\;1000000_2} \\
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\;\;\;\;1000000_2 \\
-\frac{\&amp;\;0111111}{\;\;\;\;0000000_2} \\
-\end{split}\]</div>
+<div class="section" id="divide-and-conquer">
+<h3>Divide and Conquer<a class="headerlink" href="#divide-and-conquer" title="Permalink to this headline">¶</a></h3>
+<p>In Divide and Conquer algorithms, divide the algorithm into two parts; the first parts divide the problem on hand into smaller subproblems of the same type. Then, in the second part, these smaller problems are solved and then added together (combined) to produce the problem’s final solution.</p>
+<p>Merge sorting, and quick sorting can be done with divide and conquer algorithms.</p>
 </div>
-<div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">itertools</span>
-</pre></div>
+<div class="section" id="dynamic-programming-algorithm">
+<h3>Dynamic Programming Algorithm<a class="headerlink" href="#dynamic-programming-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>These algorithms work by remembering the results of the past run and using them to find new results. In other words, a dynamic programming algorithm solves complex problems by breaking them into multiple simple subproblems and then it solves each of them once and then stores them for future use.</p>
+<p>Fibonacci sequence is a good example for Dynamic Programming algorithms.</p>
 </div>
+<div class="section" id="greedy-algorithm">
+<h3>Greedy Algorithm<a class="headerlink" href="#greedy-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>These algorithms are used for solving optimization problems. In this algorithm, we find a locally optimum solution (without any regard for any consequence in future) and hope to find the optimal solution at the global level.</p>
+<p>The method does not guarantee that we will be able to find an optimal solution.</p>
+<p>The algorithm has 5 components:</p>
+<p>The first one is a candidate set from which we try to find a solution.
+A selection function that helps choose the best possible candidate.
+A feasibility function that helps in deciding if the candidate can be used to find a solution.
+An objective function that assigns value to a possible solution or to a partial solution
+Solution function that tells when we have found a solution to the problem.
+Huffman Coding and Dijkstra’s algorithm are two prime examples where the Greedy algorithm is used.</p>
+<p>These algorithms are used for solving optimization problems. In this algorithm, we find a locally optimal solution and hope to find the optimal solution on a global scale.</p>
+<p>The method does not guarantee that we can find an optimal solution.</p>
+<p>The algorithm consists of 5 components:</p>
+<ul class="simple">
+<li><p>The first component is a candidate set from which we try to find a solution.</p></li>
+<li><p>A selection function that helps to choose the best possible candidate.</p></li>
+<li><p>A feasibility function that helps decide if the candidate can be used to find a solution.</p></li>
+<li><p>An objective function that assigns a value to a possible solution or partial solution.</p></li>
+<li><p>Solution function that indicates when we have found a solution to the problem.</p></li>
+</ul>
+<p>Huffman coding and Dijkstra’s algorithm are two main examples of the use of the Greedy algorithm.</p>
 </div>
+<div class="section" id="brute-force-algorithms">
+<h3>Brute Force Algorithms<a class="headerlink" href="#brute-force-algorithms" title="Permalink to this headline">¶</a></h3>
+<p>A brute force algorithm blindly iterates all possible solutions to search one or more than one solution that may solve a function. Think of brute force as using all possible combinations of numbers to open a safe.</p>
 </div>
-</div>
-<div class="section" id="algorithm">
-<h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_of_1bits</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-    <span class="k">while</span> <span class="n">value</span><span class="p">:</span>
-        <span class="c1"># Bitwise and of value and value-1</span>
-        <span class="n">value</span> <span class="o">&amp;=</span> <span class="n">value</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">n</span>
-</pre></div>
+<div class="section" id="backtracking-algorithms">
+<h3>Backtracking Algorithms<a class="headerlink" href="#backtracking-algorithms" title="Permalink to this headline">¶</a></h3>
+<p>Backtracking is a technique to find a solution to a problem in an incremental approach. It solves problems recursively and tries to solve a problem by solving one piece of the problem at a time. If one of the solutions fail, we remove it and backtrack to find another solution.</p>
+<p>In other words, a backtracking algorithm solves a subproblem, and if it fails to solve the problem, it undoes the last step and starts again to find the solution to the problem.</p>
+<p>For example Sudoku solver or N-Queen Problems can be solved with backtracking algorithms.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="test">
-<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mb">0b1111011</span>
-<span class="n">number_of_ones</span> <span class="o">=</span> <span class="n">count_of_1bits</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are </span><span class="si">{}</span><span class="s2"> one&#39;s in 0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number_of_ones</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b1111011
-0b1111010
-0b1111000
-0b1110000
-0b1100000
-0b1000000
-0b0
-There are 6 one&#39;s in 0b1111011
-</pre></div>
-</div>
-</div>
-</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -480,7 +467,7 @@ There are 6 one&#39;s in 0b1111011
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./notebooks"
+            path: "./content"
         },
         predefinedOutput: true
     }
@@ -492,17 +479,17 @@ There are 6 one&#39;s in 0b1111011
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="002-permutations.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02-big_o.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">All permutations and next permutation</p>
+            <p class="prev-next-title">Big O notation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="004-eratosthenes-sieve.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks/000-hanoi-tower.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Prime numbers with Eratosthenes sieve</p>
+        <p class="prev-next-title">Hanoi tower</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

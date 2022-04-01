@@ -7,46 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enigma Virtual Machine &#8212; Days of Algo</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/customize.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/customize.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/font_button.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/font_button.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -55,10 +55,12 @@
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Bibliography" href="../bibliography.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://tschinz.github.io/days-of-algo/content/notebooks/013-enigma-machine.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sorting Algorithms" href="014-sorting-algorithms.html" />
     <link rel="prev" title="Diffie Hellman (DH) Key Exchange" href="012-diffie-hellman-key-exchange.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -79,19 +81,19 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/days-of-algo-icon.svg" class="logo" alt="logo">
+      <img src="../../_static/days-of-algo-icon.svg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Days of Algo</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -191,6 +193,11 @@
      Enigma Virtual Machine
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="014-sorting-algorithms.html">
+     Sorting Algorithms
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -241,7 +248,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/013-enigma-machine.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/notebooks/013-enigma-machine.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -260,8 +267,13 @@
             href="https://github.com/tschinz/days-of-algo"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/tschinz/days-of-algo/issues/new?title=Issue%20on%20page%20%2Fcontent/notebooks/013-enigma-machine.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/tschinz/days-of-algo/edit/master/jupyterbook/content/notebooks/013-enigma-machine.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -279,13 +291,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/notebooks/013-enigma-machine.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/content/notebooks/013-enigma-machine.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
+                    src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/tschinz/days-of-algo/blob/master/jupyterbook/content/notebooks/013-enigma-machine.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -407,7 +424,7 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="enigma-virtual-machine">
 <h1>Enigma Virtual Machine<a class="headerlink" href="#enigma-virtual-machine" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-default" id="key-exchange">
-<a class="reference internal image-reference" href="../_images/013-enigma_machine.jpg"><img alt="../_images/013-enigma_machine.jpg" src="../_images/013-enigma_machine.jpg" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../../_images/013-enigma_machine.jpg"><img alt="../../_images/013-enigma_machine.jpg" src="../../_images/013-enigma_machine.jpg" style="width: 50%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Source: Wikipedia</span><a class="headerlink" href="#key-exchange" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Enigma_machine">Enigma Machine</a> is the most powerful cipher machine used by Nazi Germany during the World War II. It has an electromechanical design which can scramble 26 Letters. When you press a button the corresponding light according to the enigma setting is lit up. It was invented by <a class="reference external" href="https://en.wikipedia.org/wiki/Arthur_Scherbius">Arthur Scherbius</a> and <a class="reference external" href="https://de.wikipedia.org/wiki/Ernst_Richard_Ritter">Richard Ritter</a>.</p>
@@ -417,7 +434,7 @@
 <p>Caesar cipher offers nowadays essentially no communication security.</p>
 </div>
 <div class="figure align-default" id="caesar-cipher">
-<a class="reference internal image-reference" href="../_images/013-caesar_cipher.svg"><img alt="../_images/013-caesar_cipher.svg" src="../_images/013-caesar_cipher.svg" width="40%" /></a>
+<a class="reference internal image-reference" href="../../_images/013-caesar_cipher.svg"><img alt="../../_images/013-caesar_cipher.svg" src="../../_images/013-caesar_cipher.svg" width="40%" /></a>
 <p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Caesar Cipher with <span class="math notranslate nohighlight">\(k = 3\)</span> Source: Wikipedia</span><a class="headerlink" href="#caesar-cipher" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="terminology">
@@ -432,7 +449,7 @@
 <h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
 <p>The Enigma Machine works in a similar fashion with a more complex structure.</p>
 <div class="figure align-default" id="enigma-diagram">
-<a class="reference internal image-reference" href="../_images/013-enigma_diagram.jpg"><img alt="../_images/013-enigma_diagram.jpg" src="../_images/013-enigma_diagram.jpg" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../../_images/013-enigma_diagram.jpg"><img alt="../../_images/013-enigma_diagram.jpg" src="../../_images/013-enigma_diagram.jpg" style="width: 80%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Enigma Diagram Source: Louise Dade</span><a class="headerlink" href="#enigma-diagram" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="rotor-and-reflector-types">
@@ -590,7 +607,7 @@
 </ul>
 <p>All these informations were changed daily, the  exact setup could be found in a monthly issued <code class="docutils literal notranslate"><span class="pre">codesheet</span></code>.</p>
 <div class="figure align-default" id="enigma-codesheet">
-<a class="reference internal image-reference" href="../_images/013-enigma_codesheet.jpg"><img alt="../_images/013-enigma_codesheet.jpg" src="../_images/013-enigma_codesheet.jpg" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../../_images/013-enigma_codesheet.jpg"><img alt="../../_images/013-enigma_codesheet.jpg" src="../../_images/013-enigma_codesheet.jpg" style="width: 80%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Codesheet WWII Source: Nazis</span><a class="headerlink" href="#enigma-codesheet" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -956,7 +973,7 @@ the enigma machines were a series of electro-mechanical rotor cipher machines de
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./notebooks"
+            path: "./content/notebooks"
         },
         predefinedOutput: true
     }
@@ -975,10 +992,10 @@ the enigma machines were a series of electro-mechanical rotor cipher machines de
             <p class="prev-next-title">Diffie Hellman (DH) Key Exchange</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="014-sorting-algorithms.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Sorting Algorithms</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -999,7 +1016,7 @@ the enigma machines were a series of electro-mechanical rotor cipher machines de
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

@@ -5,48 +5,48 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prime numbers with Eratosthenes sieve &#8212; Days of Algo</title>
+    <title>Counting 1 Bits &#8212; Days of Algo</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/customize.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/customize.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/font_button.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/font_button.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -55,11 +55,13 @@
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Binary addition FSM" href="005-binary-addition-fsm.html" />
-    <link rel="prev" title="Counting 1 Bits" href="003-counting-1bits.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://tschinz.github.io/days-of-algo/content/notebooks/003-counting-1bits.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Prime numbers with Eratosthenes sieve" href="004-eratosthenes-sieve.html" />
+    <link rel="prev" title="All permutations and next permutation" href="002-permutations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -79,19 +81,19 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/days-of-algo-icon.svg" class="logo" alt="logo">
+      <img src="../../_static/days-of-algo-icon.svg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Days of Algo</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -136,13 +138,13 @@
      All permutations and next permutation
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="003-counting-1bits.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Counting 1 Bits
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="004-eratosthenes-sieve.html">
      Prime numbers with Eratosthenes sieve
     </a>
    </li>
@@ -189,6 +191,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="013-enigma-machine.html">
      Enigma Virtual Machine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="014-sorting-algorithms.html">
+     Sorting Algorithms
     </a>
    </li>
   </ul>
@@ -241,7 +248,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/004-eratosthenes-sieve.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/notebooks/003-counting-1bits.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -260,8 +267,13 @@
             href="https://github.com/tschinz/days-of-algo"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/tschinz/days-of-algo/issues/new?title=Issue%20on%20page%20%2Fcontent/notebooks/003-counting-1bits.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/tschinz/days-of-algo/edit/master/jupyterbook/content/notebooks/003-counting-1bits.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -279,13 +291,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/notebooks/004-eratosthenes-sieve.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tschinz/days-of-algo/master?urlpath=lab/tree/jupyterbook/content/notebooks/003-counting-1bits.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
+                    src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/tschinz/days-of-algo/blob/master/jupyterbook/content/notebooks/003-counting-1bits.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -331,7 +348,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Prime numbers with Eratosthenes sieve</h1>
+                <h1>Counting 1 Bits</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -370,33 +387,54 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="prime-numbers-with-eratosthenes-sieve">
-<h1>Prime numbers with Eratosthenes sieve<a class="headerlink" href="#prime-numbers-with-eratosthenes-sieve" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Eratosthenes</a> is an ancien greek algorithm for finding all prime numbers up to any given limit.</p>
-<p>A prime number is natural number that has exactly two distinct natural numbers divisors; the number 1 and itself.</p>
-<p>The first prime numbers are</p>
-<div class="math notranslate nohighlight">
-\[ 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113 \]</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="counting-1-bits">
+<h1>Counting 1 Bits<a class="headerlink" href="#counting-1-bits" title="Permalink to this headline">¶</a></h1>
+<p>Many times you need to count the number of ones or zeros in a number. Let’s take as example <span class="math notranslate nohighlight">\(123_{10} = 1111011_2\)</span>. There are 6 ones and 1 zero.</p>
+<p>You can place a single bit mask and run over the number and count non-zero results. But with that solution you loop over ones and zeros.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is possible to count only the ones and ignoring the zeros, meaning only performing 6 iteration instead of 7</p>
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<p>To find all the prime numbers less than or equal to a given integer <span class="math notranslate nohighlight">\(n\)</span> by Eratosthenes’ method:</p>
-<ol class="simple">
-<li><p>Create a list of consecutive integers from <span class="math notranslate nohighlight">\(2\)</span> through <span class="math notranslate nohighlight">\(n\)</span>: <span class="math notranslate nohighlight">\((2, 3, 4, ..., n)\)</span>.</p></li>
-<li><p>Initially, let <span class="math notranslate nohighlight">\(p\)</span> equal 2, the smallest prime number.</p></li>
-<li><p>Enumerate the multiples of <span class="math notranslate nohighlight">\(p\)</span> by counting in increments of <span class="math notranslate nohighlight">\(p\)</span> from <span class="math notranslate nohighlight">\(2p\)</span> to <span class="math notranslate nohighlight">\(n\)</span>, and mark them in the list (these will be <span class="math notranslate nohighlight">\(2p, 3p, 4p, ...;\)</span> the <span class="math notranslate nohighlight">\(p\)</span> itself should not be marked).</p></li>
-<li><p>Find the smallest number in the list greater than <span class="math notranslate nohighlight">\(p\)</span> that is not marked. If there was no such number, stop. Otherwise, let <span class="math notranslate nohighlight">\(p\)</span> now equal this new number (which is the next prime), and repeat from step 3.</p></li>
-<li><p>When the algorithm terminates, the numbers remaining not marked in the list are all the primes below <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
-</ol>
-<div class="figure align-default" id="animation-sieve-of-eratosthenes">
-<a class="reference internal image-reference" href="../_images/004-eratosthenes-sieve.gif"><img alt="../_images/004-eratosthenes-sieve.gif" src="../_images/004-eratosthenes-sieve.gif" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Animation Sieve of Eratosthenes Source: Wikipedia</span><a class="headerlink" href="#animation-sieve-of-eratosthenes" title="Permalink to this image">¶</a></p>
-</div>
+<p>Bitwise and of value and value-1 <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">&amp;</span> <span class="pre">value-1</span></code> until <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\;\;\;\;1111011_2 \\
+\frac{\&amp;\;1111010_2}{\;\;\;\;1111010_2} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\;\;\;\;1111010_2 \\
+\frac{\&amp;\;1111001_2}{\;\;\;\;1111000_2} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\;\;\;\;1111000_2 \\
+\frac{\&amp;\;1110111_2}{\;\;\;\;1110000_2} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\;\;\;\;1110000_2 \\
+\frac{\&amp;\;1101111_2}{\;\;\;\;1100000_2} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\;\;\;\;1100000_2 \\
+\frac{\&amp;\;1011111_2}{\;\;\;\;1000000_2} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\;\;\;\;1000000_2 \\
+\frac{\&amp;\;0111111}{\;\;\;\;0000000_2} \\
+\end{split}\]</div>
 </div>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
 </pre></div>
 </div>
 </div>
@@ -406,40 +444,15 @@
 <h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">seive_of_eratosthenes</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
-  <span class="sd">&quot;&quot;&quot;Algorithm to get all Prime numbers up to the value n</span>
-
-<span class="sd">  Args:</span>
-<span class="sd">      n (int, optional): End number for the prime calculations. Defaults to 2.</span>
-
-<span class="sd">  Returns:</span>
-<span class="sd">      list: list of all primenumber upto n</span>
-<span class="sd">  &quot;&quot;&quot;</span>
-  <span class="c1"># create empty array</span>
-  <span class="n">_is_prime</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-  <span class="c1"># 0 and 1 are not primes</span>
-  <span class="n">_is_prime</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">_is_prime</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
-  <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
-  <span class="k">while</span> <span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">):</span>
-    <span class="c1"># If prime[p] is not changed, then it is a prime</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">_is_prime</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
-      <span class="c1"># Update all multiples of p</span>
-      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">p</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-        <span class="n">_is_prime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">p</span> <span class="o">+=</span> <span class="mi">1</span>
-  <span class="k">return</span> <span class="n">_is_prime</span>
-
-
-<span class="k">def</span> <span class="nf">print_primenumbers</span><span class="p">(</span><span class="n">is_prime</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
-  <span class="sd">&quot;&quot;&quot;Print all prime numbers indicated on a boolean list</span>
-
-<span class="sd">  Args:</span>
-<span class="sd">      is_prime (list): list of boolean indicating of the number is a prime</span>
-<span class="sd">  &quot;&quot;&quot;</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Following are the prime numbers smaller than </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">is_prime</span><span class="p">)))</span>
-  <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">is_prime</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">is_prime</span><span class="p">[</span><span class="n">p</span><span class="p">]:</span>
-      <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_of_1bits</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">value</span><span class="p">:</span>
+        <span class="c1"># Bitwise and of value and value-1</span>
+        <span class="n">value</span> <span class="o">&amp;=</span> <span class="n">value</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span>
 </pre></div>
 </div>
 </div>
@@ -449,14 +462,21 @@
 <h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_prime</span> <span class="o">=</span> <span class="n">seive_of_eratosthenes</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-<span class="n">print_primenumbers</span><span class="p">(</span><span class="n">is_prime</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mb">0b1111011</span>
+<span class="n">number_of_ones</span> <span class="o">=</span> <span class="n">count_of_1bits</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are </span><span class="si">{}</span><span class="s2"> one&#39;s in 0b</span><span class="si">{:b}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number_of_ones</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Following are the prime numbers smaller than 121
-2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b1111011
+0b1111010
+0b1111000
+0b1110000
+0b1100000
+0b1000000
+0b0
+There are 6 one&#39;s in 0b1111011
 </pre></div>
 </div>
 </div>
@@ -477,7 +497,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./notebooks"
+            path: "./content/notebooks"
         },
         predefinedOutput: true
     }
@@ -489,17 +509,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="003-counting-1bits.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="002-permutations.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Counting 1 Bits</p>
+            <p class="prev-next-title">All permutations and next permutation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="005-binary-addition-fsm.html" title="next page">
+    <a class='right-next' id="next-link" href="004-eratosthenes-sieve.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Binary addition FSM</p>
+        <p class="prev-next-title">Prime numbers with Eratosthenes sieve</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -520,7 +540,7 @@
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

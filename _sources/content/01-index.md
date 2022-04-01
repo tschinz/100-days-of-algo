@@ -23,8 +23,8 @@ The individual challenges should take as less time as possible therefore a high 
 
 ## Algorithms
 
-| Done | #Algo | Name                                                                            | Topic         | Algorithm Type                |
-| ---- | ----- | ------------------------------------------------------------------------------- | ------------- | ----------------------------- |
+| Done  | #Algo | Name                                                                           | Topic         | Algorithm Type                |
+| ----- | ----- | ------------------------------------------------------------------------------ | ------------- | ----------------------------- |
 | ✅    |   000 | [Hanoi Tower](notebooks/000-hanoi-tower.ipynb)                                 | Game          | Recursive                     |
 | ❌    |   001 | [Matrix Chain Multiplication](notebooks/001-matrix-chain-multiplication.ipynb) | Math          |                               |
 | ✅    |   002 | [Permutations](notebooks/002-permutations.ipynb)                               | Math          | Recursive                     |
@@ -39,6 +39,7 @@ The individual challenges should take as less time as possible therefore a high 
 | ✅    |   011 | [A* Maze Solver](notebooks/011-maze-solver-astar.ipynb)                        | Graph         | Backtracking                  |
 | ✅    |   012 | [Diffie Hellman Key Exchange](notebooks/012-diffie-hellman-key-exchange.ipynb) | Cryptography  | Mathematics                   |
 | ✅    |   013 | [Enigma Machine](notebooks/013-enigma-machine.ipynb)                           | Cryptography  | Caesar cipher                 |
+| ❌    |   014 | [Sorting Algorithms](notebooks/014-sorting-algorithms.ipynb)                   | Sorting       | Various                       |
 
 ## List of interesting Algorithms
 
@@ -59,15 +60,6 @@ List of Algo ideas I will or will not do next.
 * [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform)
 * [Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter)
 * [QR Code](https://en.wikipedia.org/wiki/QR_code)
-* [Sorting Algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm) [see](https://dev.to/koladev/8-must-know-sorting-algorithms-5ja)
-  * [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
-  * [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
-  * [Insert Sort](https://en.wikipedia.org/wiki/Insertion_sort)
-  * [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
-  * [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
-  * [Bucket Sort](https://en.wikipedia.org/wiki/Bucket_sort)
-  * [Shell Sort](https://en.wikipedia.org/wiki/Shellsort)
-  * [Heap Sort](https://en.wikipedia.org/wiki/Heapsort)
 
 (section:credits)=
 ## Credits
