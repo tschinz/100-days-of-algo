@@ -15,8 +15,11 @@ endif
 
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PYTHON_INTERPRETER = python
-CONDA_ENV_NAME = jupyterbook-env
-CONDA_ENV_FILE = jupyterbookenv.yml
+CONDA_BOOK_ENV_NAME = jupyterbook-env
+CONDA_BOOK_ENV_FILE = jupyterbookenv.yml
+CONDA_ENV_NAME = daysofalgo
+CONDA_ENV_FILE = condaenv-mac-arm64.yml
+
 
 ###########################################################################
 # OS Specifics                                                            #
@@ -27,11 +30,11 @@ ifeq (,$(shell where conda))
 	HAS_CONDA = False
 else
 	HAS_CONDA = True
-	SEARCH_ENV = $(shell conda.bat info --envs | grep $(CONDA_ENV_NAME))
+	SEARCH_ENV = $(shell conda.bat info --envs | grep $(CONDA_BOOK_ENV_NAME))
 	FOUND_ENV_NAME = $(word 1, $(notdir $(SEARCH_ENV)))
 	# check if conda environment is active
 ifneq ($(CONDA_DEFAULT_ENV),$(FOUND_ENV_NAME))
-	CONDA_ACTIVATE := source $$(conda.bat info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_ENV_NAME)
+	CONDA_ACTIVATE := source $$(conda.bat info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_BOOK_ENV_NAME)
 else
 	CONDA_ACTIVATE := true
 endif
@@ -45,8 +48,8 @@ ifeq (,$(shell which conda))
 else
 	HAS_CONDA = True
 	ENV_DIR = $(shell conda info --base)
-	MY_ENV_DIR = $(ENV_DIR)/envs/$(CONDA_ENV_NAME)
-	CONDA_ACTIVATE = source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_ENV_NAME)
+	MY_ENV_DIR = $(ENV_DIR)/envs/$(CONDA_BOOK_ENV_NAME)
+	CONDA_ACTIVATE = source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_BOOK_ENV_NAME)
 endif
 endif
 
@@ -57,8 +60,8 @@ ifeq (,$(shell which conda))
 else
 	HAS_CONDA = True
 	ENV_DIR = $(shell conda info --base)
-	MY_ENV_DIR = $(ENV_DIR)/envs/$(CONDA_ENV_NAME)
-	CONDA_ACTIVATE = source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_ENV_NAME)
+	MY_ENV_DIR = $(ENV_DIR)/envs/$(CONDA_BOOK_ENV_NAME)
+	CONDA_ACTIVATE = source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_BOOK_ENV_NAME)
 endif
 endif
 
