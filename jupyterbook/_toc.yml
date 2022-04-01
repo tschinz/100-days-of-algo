@@ -1,18 +1,18 @@
 format: jb-book
-root: 01-index
+root: content/01-index
 parts:
 
 - caption:
   chapters:
-  - file: 02-big_o
+  - file: content/02-big_o
 
 - caption:
   chapters:
-  - file: 03-algorithms
+  - file: content/03-algorithms
     sections:
-    - glob: notebooks/*
+    - glob: content/notebooks/*
 
 - caption:
   chapters:
-  - file: bibliography
+  - file: content/bibliography
 

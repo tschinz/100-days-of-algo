@@ -49,3 +49,16 @@ name: Big O comparison
 ---
 Source: https://medium.com/@cparusso/what-the-hell-is-big-o-notation-9b90d9f9cd14
 ```
+
+### Worst to Best
+* <span class="badge badge-danger">$O(n!)$</span>
+* <span class="badge badge-danger">$O(2^n)$</span>
+* <span class="badge badge-danger">$O(n^2)$</span>
+* <span class="badge badge-danger">$O(n(log(n))^2)$</span>
+* <span class="badge badge-warning">$O(n log(n))$</span>
+* <span class="badge badge-success">$O(n)$</span>
+* <span class="badge badge-success">$O(k)$</span>
+* <span class="badge badge-info">$O(n+k)$</span>
+* <span class="badge badge-info">$O(nk)$</span>
+* <span class="badge badge-info">$O(log(n))$</span>
+* <span class="badge badge-info">$O(1)$</span>

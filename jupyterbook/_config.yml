@@ -1,31 +1,76 @@
+################################################################################
 # Book settings
-title: Days of Algo
-author: tschinz with ❤️
-copyright: "2021"  # Copyright year to be placed in the footer
-logo: img/days-of-algo-icon.svg
-exclude_patterns: ["README.md"]
+title                       : Days of Algo
+author                      : tschinz with ❤️
+copyright                   : "2021"
+logo                        : img/days-of-algo-icon.svg
+exclude_patterns            : ["README.md"]
 
-latex:
-  latex_documents:
-    targetname: days-of-algo.tex
+#######################################################################################
+# Execution settings
+execute:
+  # exclude_patterns:
+  #   - File.ipynb
+  execute_notebooks         : 'off'
+  allow_errors              : true # If `False`, when a code cell raises an error the execution is stopped, otherwise all cells are always run.
+  timeout                   : 240
 
+#######################################################################################
+# HTML-specific settings
 html:
-#  home_page_in_navbar option: true
-  extra_navbar: <button type="button" onclick="legibleFontSwitcher()">Switch Font</button>&nbsp;&nbsp;<button type="button" onclick="fontScaler(1.1)">&#10133;</button><button type="button" onclick="fontScaler(0.0)">&#9679;</button><button type="button" onclick="fontScaler(0.909)">&#10134;</button>
+  favicon                   : img/favicon.png
+  use_edit_page_button      : true
+  use_repository_button     : true
+  use_issues_button         : true
+  use_multitoc_numbering    : false   # Continuous numbering across parts/chapters
+  extra_footer              : ""  # Will be displayed underneath the footer.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : https://tschinz.github.io/days-of-algo
+  comments:
+    hypothesis              : false
+    utterances              : false
+  extra_navbar              : <button type="button" onclick="legibleFontSwitcher()">Switch Font</button>&nbsp;&nbsp;<button type="button" onclick="fontScaler(1.1)">&#10133;</button><button type="button" onclick="fontScaler(0.0)">&#9679;</button><button type="button" onclick="fontScaler(0.909)">&#10134;</button>
 
-  use_repository_button: true
+#######################################################################################
+# LaTeX-specific settings
+latex:
+  latex_engine              : xelatex
+  use_jupyterbook_latex     : true
+  latex_documents           :
+    targetname              : days-of-algo.tex
 
-parse:
-  myst_extended_syntax: true
+bibtex_bibfiles:
+   - content/jupyterbook.bib
 
+#######################################################################################
+# Launch button settings
+launch_buttons:
+  notebook_interface        : "jupyterlab" # "jupyterlab" or "classic"
+  #jupyterhub_url           : "https://emsc4033-2021.rses.underworldcloud.org"  # The URL for your JupyterHub.
+  binderhub_url             : "https://mybinder.org"
+  colab_url                 : "https://colab.research.google.com"
+
+#######################################################################################
+# Repository settings
+repository:
+  url                       : https://github.com/tschinz/days-of-algo
+  path_to_book              : jupyterbook
+  branch                    : master
+
+#######################################################################################
+# Advanced and power-user settings
 sphinx:
   config:
-    html_show_copyright: false
+    html_show_copyright     : false
     # html_extra_path: ['files']
-
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-    myst_enable_extensions:
+#######################################################################################
+# Parse and render settings
+parse:
+  #myst_extended_syntax      : true
+  myst_url_schemes          : [mailto, http, https]
+  myst_enable_extensions:
     - amsmath
     - colon_fence
     - deflist
@@ -35,27 +80,3 @@ sphinx:
     - replacements
     - smartquotes
     - substitution
-
-repository:
-  url          : https://github.com/tschinz/days-of-algo # Online location of this book
-  path_to_book : "jupyterbook"  # A path to your book's folder, relative to the repository root.
-  branch       : master  # Which branch of the repository should be used when creating links (optional)
-
-launch_buttons:
-  # switch this off when droplet is not active
-  #jupyterhub_url: "https://emsc4033-2021.rses.underworldcloud.org"  # The URL for your JupyterHub.
-  binderhub_url:  "https://mybinder.org"  # The URL of the BinderHub (e.g., https://mybinder.org)
-  notebook_interface: "jupyterlab" # "jupyterlab" or "classic"
-
-
-execute:
-  # exclude_patterns:
-  #   - File.ipynb
-
-  execute_notebooks: 'off'
-
-  allow_errors : true # If `False`, when a code cell raises an error the execution is stopped, otherwise all cells are always run.
-  timeout: 240
-
-bibtex_bibfiles:
-   - jupyterbook.bib
